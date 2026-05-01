@@ -1,0 +1,16 @@
+{
+  "section_title_ar": "المسيرة المهنية",
+  "section_title_en": "Career Journey",
+  "items": [
+    { "period": "2025 — حتى الآن", "role_ar": "رئيس مجلس الإدارة", "role_en": "Chairman of the Board", "company_ar": "المصرف الصناعي السوري", "company_en": "Syrian Industrial Bank", "desc_ar": "تحويل المصرف إلى أداة وطنية لدعم الصناعة عبر الأتمتة والخدمات الرقمية.", "desc_en": "Transforming the bank into an effective national tool supporting industry through automation." },
+    { "period": "2025", "role_ar": "مستشار وزير الاتصالات", "role_en": "Minister of ICT Advisor", "company_ar": "وزارة الاتصالات — سوريا", "company_en": "Ministry of ICT — Syria", "desc_ar": "قيادة التحول الرقمي الوطني بالشراكة مع STC وشركات عالمية.", "desc_en": "Leading national digital transformation with STC and global companies." },
+    { "period": "2019 — حتى الآن", "role_ar": "مؤسس ومدير توليب للتقنيات", "role_en": "Founder & CEO, Tulip Techs", "company_ar": "السعودية وتركيا", "company_en": "Saudi Arabia & Turkey", "desc_ar": "أول شركة لتصنيع الروبوتات الصناعية في الشرق الأوسط، بقيمة 10 مليون دولار في 2024.", "desc_en": "First industrial robotics manufacturer in the Middle East, valued at $10M in 2024." },
+    { "period": "2002 — حتى الآن", "role_ar": "مؤسس المركاز للشد الإنشائي", "role_en": "Founder, Al-Mirkaz Structures", "company_ar": "المملكة العربية السعودية", "company_en": "Saudi Arabia", "desc_ar": "الشركة الرائدة في مشاريع الشد الإنشائي الكبرى، بقيمة 15 مليون دولار في 2024.", "desc_en": "Leading company in major structural tension projects, valued at $15M in 2024." }
+  ],
+  "clients": [
+    { "name": "أرامكو السعودية" }, { "name": "Bosch" }, { "name": "Unicharm" },
+    { "name": "STC" }, { "name": "Universal Robots" }, { "name": "ROBCO" },
+    { "name": "وزارة الدفاع السعودية" }, { "name": "Four Seasons" },
+    { "name": "Sheraton" }, { "name": "Rosewood" }
+  ]
+}

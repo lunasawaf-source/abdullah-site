@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خبر | عبدالله العلبي</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0EA5C9;--teal-dark:#0C7EA0;--blue:#3B82F6;--bg:#F7FBFE;--bg-2:#EEF7FC;--text-dark:#0F2A35;--text-mid:#2C5F73;--text-muted:#6B9AAA;--border:rgba(14,165,201,0.15);--shadow:0 4px 24px rgba(14,165,201,0.10);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text-dark);font-family:'Tajawal',sans-serif;}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:white;border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(14,165,201,0.07);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
+.nav-back{color:var(--teal);font-size:14px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;}
+.nav-back:hover{color:var(--teal-dark);}
+.detail-wrapper{max-width:800px;margin:0 auto;padding:60px 40px 100px;}
+.detail-hero{width:100%;height:300px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:80px;background:linear-gradient(135deg,#CFFAFE,#A5F3FC);margin-bottom:40px;}
+.img-teal{background:linear-gradient(135deg,#CFFAFE,#A5F3FC);}
+.img-blue{background:linear-gradient(135deg,#DBEAFE,#BFDBFE);}
+.img-cyan{background:linear-gradient(135deg,#CCFBF1,#99F6E4);}
+.img-sky{background:linear-gradient(135deg,#E0F2FE,#BAE6FD);}
+.img-indigo{background:linear-gradient(135deg,#EEF2FF,#C7D2FE);}
+.detail-cat{font-size:11px;letter-spacing:3px;color:var(--teal);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.detail-cat::before{content:'';width:24px;height:2px;background:var(--teal);}
+.detail-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);font-weight:900;color:var(--text-dark);line-height:1.25;margin-bottom:14px;}
+.detail-date{font-size:14px;color:var(--text-muted);margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border);}
+.detail-body{font-size:16px;color:var(--text-mid);line-height:2.1;}
+.detail-body p{margin-bottom:20px;}
+.detail-body strong{color:var(--text-dark);}
+.back-btn{display:inline-flex;align-items:center;gap:8px;margin-top:48px;padding:12px 28px;border-radius:8px;border:1.5px solid var(--teal);color:var(--teal);font-family:'Tajawal',sans-serif;font-size:14px;font-weight:600;cursor:pointer;background:white;transition:all .3s;text-decoration:none;}
+.back-btn:hover{background:var(--bg-2);}
+.loading{text-align:center;padding:100px 40px;color:var(--text-muted);font-size:16px;}
+footer{background:linear-gradient(135deg,var(--teal-dark),var(--blue));padding:32px 60px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:18px;color:white;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.65);}
+html[lang="en"]{direction:ltr;}
+html[lang="en"] nav{flex-direction:row-reverse;}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">AO</a>
+  <a class="nav-back" href="javascript:history.back()" id="backLabel">← العودة للأخبار</a>
+</nav>
+<div class="detail-wrapper">
+  <div id="detailContent" class="loading">جاري التحميل... / Loading...</div>
+</div>
+<footer>
+  <div class="footer-logo">عبدالله العلبي | Abdullah Al-Olabi</div>
+  <p class="footer-copy">© 2026 — جميع الحقوق محفوظة / All Rights Reserved</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="js/cms-loader.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('slug');
+const lang = params.get('lang') || 'ar';
+const imgBgsLocal = ['img-teal','img-blue','img-cyan','img-sky','img-indigo'];
+if (lang === 'en') {
+  document.documentElement.lang = 'en';
+  document.documentElement.dir = 'ltr';
+  document.getElementById('backLabel').textContent = '← Back to News';
+}
+async function loadDetail() {
+  const el = document.getElementById('detailContent');
+  if (!slug) { el.innerHTML = lang==='ar'?'الخبر غير موجود':'News item not found.'; return; }
+  const all = await getNews();
+  const item = all.find(i => i.slug === slug);
+  if (!item) { el.innerHTML = lang==='ar'?'الخبر غير موجود':'News item not found.'; return; }
+  const title   = lang==='ar'?(item.title_ar||item.title_en):(item.title_en||item.title_ar);
+  const content = lang==='ar'?(item.content_ar||item.body||item.content_en):(item.content_en||item.body||item.content_ar);
+  const cat     = lang==='ar'?(item.category_ar||item.category):(item.category_en||item.category);
+  const emoji   = getEmoji(item.category||item.category_en||item.category_ar);
+  const date    = fmtDate(item.date, lang);
+  const html    = typeof marked!=='undefined'?marked.parse(content||''):(content||'').replace(/\n\n/g,'<br><br>');
+  const bg      = imgBgsLocal[0];
+  document.title = title + ' | عبدالله العلبي';
+  el.innerHTML = `
+    <div class="detail-hero ${bg}">${emoji}</div>
+    <p class="detail-cat">${cat||''}</p>
+    <h1 class="detail-title">${title||''}</h1>
+    <p class="detail-date">${date}</p>
+    <div class="detail-body">${html}</div>
+    <a class="back-btn" href="javascript:history.back()">${lang==='ar'?'← العودة للأخبار':'← Back to News'}</a>`;
+}
+loadDetail();
+</script>
+</body>
+</html>

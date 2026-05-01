@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "number": "+25", "label_ar": "عاماً من الخبرة", "label_en": "Years of Experience" },
+    { "number": "$60M+", "label_ar": "قيمة المشاريع", "label_en": "Projects Value" },
+    { "number": "$25M", "label_ar": "إجمالي قيمة الشركات", "label_en": "Total Company Value" },
+    { "number": "80+", "label_ar": "مهندس تم تدريبه", "label_en": "Engineers Trained" }
+  ]
+}
