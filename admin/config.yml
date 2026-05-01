@@ -1,0 +1,59 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: 'ar'
+
+collections:
+  - name: "news"
+    label: "الأخبار"
+    label_singular: "خبر"
+    folder: "_news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "العنوان (عربي)", name: "title_ar", widget: "string" }
+      - { label: "Title (English)", name: "title_en", widget: "string" }
+      - { label: "التصنيف (عربي)", name: "category_ar", widget: "string", default: "عام" }
+      - { label: "Category (English)", name: "category_en", widget: "string", default: "General" }
+      - { label: "المقتطف (عربي)", name: "excerpt_ar", widget: "text" }
+      - { label: "Excerpt (English)", name: "excerpt_en", widget: "text" }
+      - { label: "المحتوى الكامل (عربي)", name: "content_ar", widget: "markdown" }
+      - { label: "Full Content (English)", name: "content_en", widget: "markdown" }
+      - { label: "التاريخ", name: "date", widget: "datetime" }
+      - { label: "الرمز التعبيري", name: "emoji", widget: "string", default: "📰" }
+
+  - name: "blog"
+    label: "المدونة"
+    label_singular: "مقال"
+    folder: "_blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "العنوان (عربي)", name: "title_ar", widget: "string" }
+      - { label: "Title (English)", name: "title_en", widget: "string" }
+      - { label: "التصنيف (عربي)", name: "tag_ar", widget: "string", default: "عام" }
+      - { label: "Tag (English)", name: "tag_en", widget: "string", default: "General" }
+      - { label: "المقتطف (عربي)", name: "excerpt_ar", widget: "text" }
+      - { label: "Excerpt (English)", name: "excerpt_en", widget: "text" }
+      - { label: "المحتوى الكامل (عربي)", name: "content_ar", widget: "markdown" }
+      - { label: "Full Content (English)", name: "content_en", widget: "markdown" }
+      - { label: "التاريخ", name: "date", widget: "datetime" }
+
+  - name: "settings"
+    label: "إعدادات الموقع"
+    files:
+      - label: "المعلومات الشخصية"
+        name: "personal"
+        file: "_data/personal.json"
+        fields:
+          - { label: "الاسم (عربي)", name: "name_ar", widget: "string", default: "عبد الله العلبي" }
+          - { label: "Name (English)", name: "name_en", widget: "string", default: "Abdullah Al-Olabi" }
+          - { label: "اللقب (عربي)", name: "title_ar", widget: "string" }
+          - { label: "Title (English)", name: "title_en", widget: "string" }
+          - { label: "البريد الإلكتروني", name: "email", widget: "string" }
+          - { label: "رقم السعودية", name: "phone_sa", widget: "string" }
+          - { label: "رقم تركيا", name: "phone_tr", widget: "string" }
