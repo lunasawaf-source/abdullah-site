@@ -1,0 +1,12 @@
+{
+  "section_title_ar": "مجالات التخصص",
+  "section_title_en": "Areas of Expertise",
+  "cards": [
+    { "icon": "🤖", "title_ar": "الروبوتات والأتمتة", "title_en": "Robotics & Automation", "desc_ar": "تصنيع أول روبوتات صناعية في الشرق الأوسط وتنفيذ مشاريع أتمتة لأرامكو وشركات عالمية كبرى.", "desc_en": "Pioneer in manufacturing industrial robots in the Middle East, executing automation projects for Aramco and global companies." },
+    { "icon": "🏭", "title_ar": "الثورة الصناعية الرابعة", "title_en": "Industry 4.0", "desc_ar": "شهادة MIT وخبرة عملية في تطوير المصانع الذكية وتوطين التكنولوجيا الصناعية.", "desc_en": "MIT certified specialist with hands-on experience in smart factory development and technology localization." },
+    { "icon": "💰", "title_ar": "تمويل المشاريع", "title_en": "Project Finance", "desc_ar": "تأسيس وإدارة صناديق التمويل الصناعي وبرامج دعم المصانع بالشراكة مع جهات حكومية.", "desc_en": "Founding and managing industrial finance funds and factory support programs with government partnerships." },
+    { "icon": "🏗️", "title_ar": "المشاريع الكبرى", "title_en": "Large-Scale Projects", "desc_ar": "تنفيذ مشاريع بقيمة +60M$ منها مشاريع لأرامكو وولي العهد السعودي.", "desc_en": "Executing projects worth over $60M including landmark projects for Aramco and the Saudi Crown Prince." },
+    { "icon": "🏦", "title_ar": "القيادة المصرفية", "title_en": "Banking Leadership", "desc_ar": "رئيس مجلس إدارة المصرف الصناعي السوري يعمل على التحول الرقمي وجذب الاستثمارات.", "desc_en": "Chairman of the Syrian Industrial Bank, driving digital transformation and attracting global investment." },
+    { "icon": "🌐", "title_ar": "الشراكات الدولية", "title_en": "International Partnerships", "desc_ar": "شراكات مع Bosch وSTC وUniversal Robots وشركات سعودية وأوروبية كبرى.", "desc_en": "Partnerships with Bosch, STC, Universal Robots, and major Saudi and European companies." }
+  ]
+}
