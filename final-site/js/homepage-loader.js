@@ -11,7 +11,7 @@ const HP_BRANCH      = 'main';
 // ============================================================
 
 async function fetchData(file) {
-  const url = `https://raw.githubusercontent.com/${HP_GITHUB_USER}/${HP_GITHUB_REPO}/${HP_BRANCH}/_data/${file}`;
+  const url = `https://raw.githubusercontent.com/${HP_GITHUB_USER}/${HP_GITHUB_REPO}/${HP_BRANCH}/final-site/_data/${file}`;
   try {
     const r = await fetch(url);
     if (!r.ok) return null;
