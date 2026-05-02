@@ -2,8 +2,8 @@
 // cms-loader.js — Dynamic CMS content renderer
 // !! UPDATE THESE TWO LINES WITH YOUR GITHUB DETAILS !!
 // ============================================================
-const GITHUB_USER = 'YOUR_GITHUB_USERNAME';
-const GITHUB_REPO = 'YOUR_GITHUB_REPO';
+const GITHUB_USER = 'lunasawaf-source';
+const GITHUB_REPO = 'abdullah-site';
 const BRANCH      = 'main';
 // ============================================================
 
