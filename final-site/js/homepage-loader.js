@@ -5,8 +5,8 @@
 // Falls back silently to static HTML if not configured.
 // !! UPDATE THESE WITH YOUR GITHUB DETAILS !!
 // ============================================================
-const HP_GITHUB_USER = 'lunasawaf-source';
-const HP_GITHUB_REPO = 'abdullah-site';
+const HP_GITHUB_USER = 'YOUR_GITHUB_USERNAME';
+const HP_GITHUB_REPO = 'YOUR_GITHUB_REPO';
 const HP_BRANCH      = 'main';
 // ============================================================
 
