@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: lunasawaf-source/abdullah-site
   branch: main
 
 media_folder: "images/uploads"
