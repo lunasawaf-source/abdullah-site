@@ -683,23 +683,8 @@ function openStaticModal(i) {
 }
 
 // ── Slider ─────────────────────────────────────────────────
-let sliderCur = 0;
-const CARD_W = 382;
-
-function updateSliderPos() {
-  const track = document.getElementById('sliderTrack');
-  if (!track) return;
-  const rtl = document.documentElement.dir === 'rtl';
-  track.style.transform = rtl ? `translateX(${sliderCur*CARD_W}px)` : `translateX(-${sliderCur*CARD_W}px)`;
-  document.querySelectorAll('.slider-dot').forEach((d,i) => d.classList.toggle('active', i===sliderCur));
-}
-function goToSlide(i) { sliderCur = i; updateSliderPos(); }
-function slideNewsBy(dir) {
-  const total = document.querySelectorAll('#sliderTrack .slider-card').length || 5;
-  sliderCur = (sliderCur + dir + total) % total;
-  updateSliderPos();
-}
-setInterval(() => slideNewsBy(1), 5000);
+// All slider functions (sliderCur, CARD_W, updateSliderPos, goToSlide, slideNewsBy)
+// are defined in cms-loader.js — no duplicates here
 
 // ── Page routing ───────────────────────────────────────────
 let _lang = 'ar';
@@ -744,7 +729,7 @@ function scrollToContact() {
 
 // ── Init ───────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  updateSliderPos();
+  if (typeof updateSliderPos === 'function') updateSliderPos();
   if (typeof initHomepage === 'function') initHomepage(_lang).catch(() => {});
   if (typeof loadHomepageCMS === 'function') loadHomepageCMS(_lang).catch(() => {});
 });
