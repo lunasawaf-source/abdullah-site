@@ -2,8 +2,8 @@
 // cms-loader.js — Dynamic CMS content renderer
 // !! UPDATE THESE TWO LINES WITH YOUR GITHUB DETAILS !!
 // ============================================================
-const GITHUB_USER = 'lunasawaf-source';
-const GITHUB_REPO = 'abdullah-site';
+const GITHUB_USER = 'YOUR_GITHUB_USERNAME';
+const GITHUB_REPO = 'YOUR_GITHUB_REPO';
 const BRANCH      = 'main';
 // ============================================================
 
@@ -78,11 +78,11 @@ async function loadAll(folder) {
 
 // ── public API ─────────────────────────────────────────────
 async function getNews(limit = null) {
-  const all = await loadAll('_news');
+  const all = await loadAll('final-site/_news');
   return limit ? all.slice(0, limit) : all;
 }
 async function getBlog(limit = null) {
-  const all = await loadAll('_blog');
+  const all = await loadAll('final-site/_blog');
   return limit ? all.slice(0, limit) : all;
 }
 
