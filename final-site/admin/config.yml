@@ -2,7 +2,7 @@ backend:
   name: github
   repo: lunasawaf-source/abdullah-site
   branch: main
-  base_url: https://decapcms-auth.netlify.app
+  base_url: https://api.netlify.com
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
