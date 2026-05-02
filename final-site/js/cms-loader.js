@@ -2,8 +2,8 @@
 // cms-loader.js — Dynamic CMS content renderer
 // !! UPDATE THESE TWO LINES WITH YOUR GITHUB DETAILS !!
 // ============================================================
-const GITHUB_USER = 'lunasawaf-source';
-const GITHUB_REPO = 'abdullah-site';
+const GITHUB_USER = 'YOUR_GITHUB_USERNAME';
+const GITHUB_REPO = 'YOUR_GITHUB_REPO';
 const BRANCH      = 'main';
 // ============================================================
 
@@ -260,8 +260,10 @@ function initSliderControls() {
 }
 
 function slideNewsBy(dir) {
-  if (!sliderTotal) return;
-  sliderCur = (sliderCur + dir + sliderTotal) % sliderTotal;
+  const cards = document.querySelectorAll('#sliderTrack .slider-card');
+  const total = sliderTotal || cards.length || 5;
+  if (!total) return;
+  sliderCur = (sliderCur + dir + total) % total;
   updateSliderPos();
 }
 
