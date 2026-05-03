@@ -3,94 +3,95 @@ backend:
   repo: lunasawaf-source/abdullah-site
   branch: main
   base_url: https://abdullah-oauth.pages.dev
-media_folder: "images/uploads"
+  
+media_folder: "final-site/images/uploads"
 public_folder: "/images/uploads"
-
+ 
 locale: 'ar'
-
+ 
 # ═══════════════════════════════════════════════════════════════
 # HOMEPAGE SETTINGS
 # Every field maps 1-to-1 to an element on the current index.html
 # ═══════════════════════════════════════════════════════════════
 collections:
-
+ 
   - name: "homepage"
     label: "🏠 الصفحة الرئيسية / Homepage"
     files:
-
+ 
       # ── HERO SECTION ──────────────────────────────────────
       # eyebrow · name (2 words each lang) · job title ·
       # bio description · 2 CTA buttons · badge · photo
       # ──────────────────────────────────────────────────────
       - label: "Hero Section"
         name: "hero"
-        file: "_data/hero.json"
+        file: "final-site/_data/hero.json"
         fields:
-
+ 
           - label: "Eyebrow Line — Arabic"
             name: "eyebrow_ar"
             widget: "string"
             default: "رائد أعمال · مستثمر · خبير تنمية صناعية"
             hint: "Small text shown above the name"
-
+ 
           - label: "Eyebrow Line — English"
             name: "eyebrow_en"
             widget: "string"
             default: "Entrepreneur · Investor · Industrial Expert"
-
+ 
           - label: "Name — Arabic (first word: عبدالله)"
             name: "name_first_ar"
             widget: "string"
             default: "عبدالله"
-
+ 
           - label: "Name — Arabic (second word, shown in color: العلبي)"
             name: "name_second_ar"
             widget: "string"
             default: "العلبي"
             hint: "This word appears in teal/blue gradient"
-
+ 
           - label: "Name — English (first word: Abdullah)"
             name: "name_first_en"
             widget: "string"
             default: "Abdullah"
-
+ 
           - label: "Name — English (second word, shown in color: Al-Olabi)"
             name: "name_second_en"
             widget: "string"
             default: "Al-Olabi"
             hint: "This word appears in teal/blue gradient"
-
+ 
           - label: "Job Title — Arabic"
             name: "subtitle_ar"
             widget: "string"
             default: "رئيس مجلس إدارة المصرف الصناعي السوري"
             hint: "Shown in italic below the name"
-
+ 
           - label: "Job Title — English"
             name: "subtitle_en"
             widget: "string"
             default: "Chairman, Syrian Industrial Bank"
-
+ 
           - label: "Bio Description — Arabic"
             name: "description_ar"
             widget: "text"
             default: "رائد أعمال ومستثمر بخبرة تزيد عن 25 عاماً في الصناعة والتكنولوجيا. مؤسس أول شركة لتصنيع الروبوتات الصناعية في الشرق الأوسط."
-
+ 
           - label: "Bio Description — English"
             name: "description_en"
             widget: "text"
             default: "Entrepreneur and investor with over 25 years across industry and technology. Founder of the first industrial robotics company in the Middle East."
-
+ 
           - label: "Primary Button Text — Arabic (اقرأ المدونة)"
             name: "cta_primary_ar"
             widget: "string"
             default: "اقرأ المدونة"
-
+ 
           - label: "Primary Button Text — English (Read Blog)"
             name: "cta_primary_en"
             widget: "string"
             default: "Read Blog"
-
+ 
           - label: "Primary Button — Links to"
             name: "cta_primary_action"
             widget: "select"
@@ -99,17 +100,17 @@ collections:
               - { label: "News page", value: "news" }
               - { label: "Contact section", value: "contact" }
             default: "blog"
-
+ 
           - label: "Secondary Button Text — Arabic (آخر الأخبار)"
             name: "cta_secondary_ar"
             widget: "string"
             default: "آخر الأخبار"
-
+ 
           - label: "Secondary Button Text — English (Latest News)"
             name: "cta_secondary_en"
             widget: "string"
             default: "Latest News"
-
+ 
           - label: "Secondary Button — Links to"
             name: "cta_secondary_action"
             widget: "select"
@@ -118,36 +119,36 @@ collections:
               - { label: "Blog page", value: "blog" }
               - { label: "Contact section", value: "contact" }
             default: "news"
-
+ 
           - label: "Experience Badge — Number (+25)"
             name: "badge_number"
             widget: "string"
             default: "+25"
             hint: "Large number on the floating badge over the photo"
-
+ 
           - label: "Experience Badge — Label Arabic (عاماً من الخبرة)"
             name: "badge_label_ar"
             widget: "string"
             default: "عاماً من الخبرة"
-
+ 
           - label: "Experience Badge — Label English (Years Experience)"
             name: "badge_label_en"
             widget: "string"
             default: "Years Experience"
-
+ 
           - label: "Hero Photo"
             name: "hero_photo"
             widget: "image"
             required: false
             hint: "Portrait photo — recommended 360×460px"
-
+ 
       # ── STATS BAR ─────────────────────────────────────────
       # 4 stat items shown in the bar below the hero
       # each has: number + label in both languages
       # ──────────────────────────────────────────────────────
       - label: "Stats Bar (4 Numbers)"
         name: "stats"
-        file: "_data/stats.json"
+        file: "final-site/_data/stats.json"
         fields:
           - label: "Statistics"
             name: "items"
@@ -165,25 +166,25 @@ collections:
               - label: "Label — English"
                 name: "label_en"
                 widget: "string"
-
+ 
       # ── EXPERTISE SECTION ─────────────────────────────────
       # 6 cards · each: emoji icon + title (ar/en) + description (ar/en)
       # ──────────────────────────────────────────────────────
       - label: "Expertise Section (6 Cards)"
         name: "expertise"
-        file: "_data/expertise.json"
+        file: "final-site/_data/expertise.json"
         fields:
-
+ 
           - label: "Section Title — Arabic (مجالات التخصص)"
             name: "section_title_ar"
             widget: "string"
             default: "مجالات التخصص"
-
+ 
           - label: "Section Title — English (Areas of Expertise)"
             name: "section_title_en"
             widget: "string"
             default: "Areas of Expertise"
-
+ 
           - label: "Cards"
             name: "cards"
             widget: "list"
@@ -207,26 +208,26 @@ collections:
               - label: "Card Description — English"
                 name: "desc_en"
                 widget: "text"
-
+ 
       # ── CAREER TIMELINE ───────────────────────────────────
       # 4 timeline items + key clients list
       # each item: period · role (ar/en) · company (ar/en) · desc (ar/en)
       # ──────────────────────────────────────────────────────
       - label: "Career Timeline"
         name: "career"
-        file: "_data/career.json"
+        file: "final-site/_data/career.json"
         fields:
-
+ 
           - label: "Section Title — Arabic (المسيرة المهنية)"
             name: "section_title_ar"
             widget: "string"
             default: "المسيرة المهنية"
-
+ 
           - label: "Section Title — English (Career Journey)"
             name: "section_title_en"
             widget: "string"
             default: "Career Journey"
-
+ 
           - label: "Timeline Items"
             name: "items"
             widget: "list"
@@ -253,7 +254,7 @@ collections:
               - label: "Description — English"
                 name: "desc_en"
                 widget: "text"
-
+ 
           - label: "Key Clients"
             name: "clients"
             widget: "list"
@@ -263,25 +264,25 @@ collections:
               - label: "Client Name"
                 name: "name"
                 widget: "string"
-
+ 
       # ── EDUCATION SECTION ─────────────────────────────────
       # 4 cards · school · degree (ar/en) · year
       # ──────────────────────────────────────────────────────
       - label: "Education & Credentials"
         name: "education"
-        file: "_data/education.json"
+        file: "final-site/_data/education.json"
         fields:
-
+ 
           - label: "Section Title — Arabic (المؤهلات والشهادات)"
             name: "section_title_ar"
             widget: "string"
             default: "المؤهلات والشهادات"
-
+ 
           - label: "Section Title — English (Education & Credentials)"
             name: "section_title_en"
             widget: "string"
             default: "Education & Credentials"
-
+ 
           - label: "Education Cards"
             name: "cards"
             widget: "list"
@@ -300,7 +301,7 @@ collections:
               - label: "Year or Location (USA, 2015-2017, etc)"
                 name: "year"
                 widget: "string"
-
+ 
       # ── CONTACT SECTION ───────────────────────────────────
       # email · phone SA · phone TR · website 1 · website 2 ·
       # LinkedIn · description text (ar/en) · CTA button (ar/en)
@@ -308,139 +309,139 @@ collections:
       # ──────────────────────────────────────────────────────
       - label: "Contact Section"
         name: "contact"
-        file: "_data/contact.json"
+        file: "final-site/_data/contact.json"
         fields:
-
+ 
           - label: "Section Title — Arabic (تواصل معي)"
             name: "section_title_ar"
             widget: "string"
             default: "تواصل معي"
-
+ 
           - label: "Section Title — English (Get in Touch)"
             name: "section_title_en"
             widget: "string"
             default: "Get in Touch"
-
+ 
           - label: "Email Address"
             name: "email"
             widget: "string"
             default: "abdullah.olabi79@gmail.com"
-
+ 
           - label: "Phone — Saudi Arabia"
             name: "phone_sa"
             widget: "string"
             default: "+966 506255045"
-
+ 
           - label: "Phone — Turkey"
             name: "phone_tr"
             widget: "string"
             default: "+90 5346610416"
-
+ 
           - label: "Website 1 (tuliptechs.com)"
             name: "website_1"
             widget: "string"
             default: "tuliptechs.com"
-
+ 
           - label: "Website 2 (al-mirkaz.com)"
             name: "website_2"
             widget: "string"
             default: "al-mirkaz.com"
-
+ 
           - label: "LinkedIn URL"
             name: "linkedin_url"
             widget: "string"
             required: false
-
+ 
           - label: "Description Text — Arabic"
             name: "description_ar"
             widget: "text"
             default: "للتواصل بخصوص الاستثمار، الشراكات الصناعية، أو المشاريع التقنية في المنطقة العربية وأوروبا."
-
+ 
           - label: "Description Text — English"
             name: "description_en"
             widget: "text"
             default: "For inquiries about investment, industrial partnerships, or technology projects across the Arab world and Europe."
-
+ 
           - label: "CTA Button Text — Arabic (ابدأ المحادثة)"
             name: "cta_ar"
             widget: "string"
             default: "ابدأ المحادثة"
-
+ 
           - label: "CTA Button Text — English (Start a Conversation)"
             name: "cta_en"
             widget: "string"
             default: "Start a Conversation"
-
+ 
       # ── NAVIGATION & FOOTER ───────────────────────────────
       # all nav link labels · Contact CTA text · footer name & year
       # ──────────────────────────────────────────────────────
       - label: "Navigation & Footer"
         name: "navigation"
-        file: "_data/navigation.json"
+        file: "final-site/_data/navigation.json"
         fields:
-
+ 
           - label: "Logo Initials in Nav Bar (AO)"
             name: "logo_text"
             widget: "string"
             default: "AO"
-
+ 
           - label: "Nav Link: Home — Arabic (الرئيسية)"
             name: "nav_home_ar"
             widget: "string"
             default: "الرئيسية"
-
+ 
           - label: "Nav Link: Home — English (Home)"
             name: "nav_home_en"
             widget: "string"
             default: "Home"
-
+ 
           - label: "Nav Link: News — Arabic (آخر الأخبار)"
             name: "nav_news_ar"
             widget: "string"
             default: "آخر الأخبار"
-
+ 
           - label: "Nav Link: News — English (Latest News)"
             name: "nav_news_en"
             widget: "string"
             default: "Latest News"
-
+ 
           - label: "Nav Link: Blog — Arabic (المدونة)"
             name: "nav_blog_ar"
             widget: "string"
             default: "المدونة"
-
+ 
           - label: "Nav Link: Blog — English (Blog)"
             name: "nav_blog_en"
             widget: "string"
             default: "Blog"
-
+ 
           - label: "Nav CTA Button — Arabic (تواصل معي)"
             name: "nav_cta_ar"
             widget: "string"
             default: "تواصل معي"
-
+ 
           - label: "Nav CTA Button — English (Contact Me)"
             name: "nav_cta_en"
             widget: "string"
             default: "Contact Me"
-
+ 
           - label: "Footer — Full Name Line"
             name: "footer_name"
             widget: "string"
             default: "عبدالله العلبي | Abdullah Al-Olabi"
-
+ 
           - label: "Footer — Copyright Year"
             name: "footer_year"
             widget: "string"
             default: "2026"
-
+ 
   # ═══════════════════════════════════════════════════════════════
   # NEWS — .md files in _news/
   # ═══════════════════════════════════════════════════════════════
   - name: "news"
     label: "📰 الأخبار / News"
     label_singular: "خبر / News Item"
-    folder: "_news"
+    folder: "final-site/_news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title_ar}} — {{date}}"
@@ -465,14 +466,14 @@ collections:
       - { label: "Full Content — Arabic", name: "content_ar", widget: "markdown" }
       - { label: "Full Content — English", name: "content_en", widget: "markdown" }
       - { label: "Image (optional)", name: "image", widget: "image", required: false }
-
+ 
   # ═══════════════════════════════════════════════════════════════
   # BLOG — .md files in _blog/
   # ═══════════════════════════════════════════════════════════════
   - name: "blog"
     label: "✍️ المدونة / Blog"
     label_singular: "مقال / Blog Post"
-    folder: "_blog"
+    folder: "final-site/_blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title_ar}} — {{date}}"
@@ -488,4 +489,4 @@ collections:
       - { label: "Excerpt — English", name: "excerpt_en", widget: "text" }
       - { label: "Full Content — Arabic", name: "content_ar", widget: "markdown" }
       - { label: "Full Content — English", name: "content_en", widget: "markdown" }
-      - { label: "Image (optional)", name: "image", widget: "image", required: false }
+      - { label: "Image (optional)", name: "image", widget: "image", required: false } 
