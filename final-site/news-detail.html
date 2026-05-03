@@ -1,88 +1,252 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خبر | عبدالله العلبي</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#eff4ff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#31666e",
+                        "outline": "#70797a",
+                        "on-tertiary-fixed": "#00201c",
+                        "on-primary-container": "#84b8c2",
+                        "on-surface": "#0b1c30",
+                        "error-container": "#ffdad6",
+                        "secondary": "#4059aa",
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed": "#62fae3",
+                        "on-surface-variant": "#40484a",
+                        "secondary-fixed-dim": "#b6c4ff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#1d3989",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#001f24",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#dce9ff",
+                        "primary-fixed": "#b6ecf5",
+                        "background": "#f8f9ff",
+                        "tertiary": "#00332d",
+                        "on-primary-fixed-variant": "#134e56",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary": "#003239",
+                        "surface-container": "#e5eeff",
+                        "primary-container": "#0d4a52",
+                        "outline-variant": "#c0c8ca",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#004c43",
+                        "surface-variant": "#d3e4fe",
+                        "primary-fixed-dim": "#9acfd9",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-primary": "#9acfd9",
+                        "secondary-container": "#8fa7fe",
+                        "on-secondary-fixed-variant": "#264191",
+                        "on-background": "#0b1c30",
+                        "surface-dim": "#cbdbf5",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#dce1ff",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "surface": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-container": "#00c5b1",
+                        "tertiary-fixed-dim": "#3cddc7",
+                        "on-secondary-fixed": "#00164e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-padding": "80px",
+                        "header-height": "72px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Space Grotesk"],
+                        "display-xl": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
 <style>
-:root{--teal:#0EA5C9;--teal-dark:#0C7EA0;--blue:#3B82F6;--bg:#F7FBFE;--bg-2:#EEF7FC;--text-dark:#0F2A35;--text-mid:#2C5F73;--text-muted:#6B9AAA;--border:rgba(14,165,201,0.15);--shadow:0 4px 24px rgba(14,165,201,0.10);}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--text-dark);font-family:'Tajawal',sans-serif;}
-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:white;border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(14,165,201,0.07);}
-.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
-.nav-back{color:var(--teal);font-size:14px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;}
-.nav-back:hover{color:var(--teal-dark);}
-.detail-wrapper{max-width:800px;margin:0 auto;padding:60px 40px 100px;}
-.detail-hero{width:100%;height:300px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:80px;background:linear-gradient(135deg,#CFFAFE,#A5F3FC);margin-bottom:40px;}
-.img-teal{background:linear-gradient(135deg,#CFFAFE,#A5F3FC);}
-.img-blue{background:linear-gradient(135deg,#DBEAFE,#BFDBFE);}
-.img-cyan{background:linear-gradient(135deg,#CCFBF1,#99F6E4);}
-.img-sky{background:linear-gradient(135deg,#E0F2FE,#BAE6FD);}
-.img-indigo{background:linear-gradient(135deg,#EEF2FF,#C7D2FE);}
-.detail-cat{font-size:11px;letter-spacing:3px;color:var(--teal);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.detail-cat::before{content:'';width:24px;height:2px;background:var(--teal);}
-.detail-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);font-weight:900;color:var(--text-dark);line-height:1.25;margin-bottom:14px;}
-.detail-date{font-size:14px;color:var(--text-muted);margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border);}
-.detail-body{font-size:16px;color:var(--text-mid);line-height:2.1;}
-.detail-body p{margin-bottom:20px;}
-.detail-body strong{color:var(--text-dark);}
-.back-btn{display:inline-flex;align-items:center;gap:8px;margin-top:48px;padding:12px 28px;border-radius:8px;border:1.5px solid var(--teal);color:var(--teal);font-family:'Tajawal',sans-serif;font-size:14px;font-weight:600;cursor:pointer;background:white;transition:all .3s;text-decoration:none;}
-.back-btn:hover{background:var(--bg-2);}
-.loading{text-align:center;padding:100px 40px;color:var(--text-muted);font-size:16px;}
-footer{background:linear-gradient(135deg,var(--teal-dark),var(--blue));padding:32px 60px;display:flex;justify-content:space-between;align-items:center;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:18px;color:white;}
-.footer-copy{font-size:13px;color:rgba(255,255,255,0.65);}
-html[lang="en"]{direction:ltr;}
-html[lang="en"] nav{flex-direction:row-reverse;}
-</style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .industrial-shadow {
+            box-shadow: 0 24px 48px -12px rgba(0, 50, 57, 0.04);
+        }
+    </style>
 </head>
-<body>
-<nav>
-  <a class="nav-logo" href="index.html">AO</a>
-  <a class="nav-back" href="javascript:history.back()" id="backLabel">← العودة للأخبار</a>
-</nav>
-<div class="detail-wrapper">
-  <div id="detailContent" class="loading">جاري التحميل... / Loading...</div>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-center h-20 bg-white/70 dark:bg-slate-900/70 backdrop-blur-[20px] shadow-sm border-b border-white/20">
+<nav class="w-full max-w-7xl flex justify-between items-center px-8">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-black bg-gradient-to-r from-teal-700 to-blue-600 bg-clip-text text-transparent" href="#">AO</a>
+<div class="hidden md:flex items-center gap-6 font-['Inter'] text-sm font-medium tracking-wide">
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-500 transition-all duration-300" href="#">Home</a>
+<a class="text-[#0D4A52] dark:text-teal-400 font-bold border-b-2 border-[#0D4A52] pb-1" href="#">Latest News</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-500 transition-all duration-300" href="#">Blog</a>
 </div>
-<footer>
-  <div class="footer-logo">عبدالله العلبي | Abdullah Al-Olabi</div>
-  <p class="footer-copy">© 2026 — جميع الحقوق محفوظة / All Rights Reserved</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-['Inter'] text-sm font-medium text-slate-600 hover:text-teal-500 transition-all">English</button>
+<button class="bg-primary-container text-white px-6 py-2.5 rounded-full font-['Inter'] text-sm font-medium hover:opacity-90 active:scale-95 transition-all duration-200">Contact Me</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-section-padding">
+<div class="max-w-7xl mx-auto px-8">
+<!-- Hero Section -->
+<section class="mb-16">
+<span class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mb-4 block">Corporate Updates</span>
+<h1 class="font-display-xl text-display-xl text-primary mb-6">Latest News &amp; <br/><span class="text-primary-container">Strategic Milestones</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Tracking the evolution of industrial leadership and technological innovation across the EMEA region through executive appointments and international partnerships.</p>
+</section>
+<!-- Featured Bento News Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+<!-- Primary Featured News -->
+<article class="md:col-span-8 group relative overflow-hidden rounded-lg glass-card industrial-shadow transition-transform duration-300">
+<div class="relative h-[400px] w-full overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A dignified interior of a contemporary banking institution with large glass windows reflecting a city skyline. The room is filled with soft, diffused daylight and high-key tones, featuring polished marble floors and minimalist teak furniture. This setting represents professional excellence and institutional stability, utilizing a clean, industrial intelligence aesthetic with subtle teal accents and sophisticated lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu7DNXYISL7QSJm4FwR5rGuL7kOXOHdrPkdkuMZ2j4ktORMPrEVpk9eagutQ6RYfVTZnAUh3G_DOqyFuNaGGvDGdIa4xAzwBR3OKIpobVHu84gmvF7_-HwCbtMlPWcTxlvISZ15QCdNSL1H9ebaLjyP34OFRLQPS0vU3G72GqWXr2Mo1cd6MKrHF1_6WkECZEDqfamZsrHAVcGSfx5hZHN6uI72IDS6VMSKbyOH_3M7CA0G1q8725ww4kSx0Makkv1bZdkD0xb7o4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-caps text-[10px] uppercase">Announcement</span>
+<span class="text-white/70 font-label-caps text-[12px]">October 24, 2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 leading-tight">Al-Olabi Assumes Syrian Industrial Bank Chairmanship</h2>
+<p class="text-white/80 font-body-md max-w-xl mb-6 line-clamp-2">A strategic move to modernize the nation's industrial financing sector, focusing on digital transformation and sustainable capital allocation for emerging manufacturers.</p>
+<a class="inline-flex items-center gap-2 font-label-caps text-white group-hover:gap-4 transition-all" href="#">
+                            READ FULL STATEMENT
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Secondary News Card -->
+<article class="md:col-span-4 flex flex-col glass-card rounded-lg overflow-hidden industrial-shadow">
+<div class="h-48 w-full overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="A macro photograph of advanced robotics components and glowing fiber optic cables in an industrial exhibition hall. The scene captures the high-tech atmosphere of a global trade fair with cool blue and teal lighting. The focus is sharp on metallic textures and circuit patterns, reflecting a theme of technological innovation and precision engineering in a modern corporate context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJbVjcS1HFHrThw_CBdFLcpxSx7Rq39PDdInTVXDrDkEDp_kpuBNnDQLN65wokkdcJk_WJknOMLS2uEPZbLpw-nG_DxnYhfawlafp76e6MBlCaOTu4SwXmVfMwJJq5ufnPn7_q4PoKusEnHAEWfurOZosbr67a8cLt27hm5x7SKZ2FW5Vs07N5GEODJJncvx9ctmTRi06aapm6VttF_vm-oaclU_OIE80sd5kDksTwnUWul1KsGfeBZk8_NIEe6sL4A6mqdMP4HqA"/>
+</div>
+<div class="p-6 flex-grow">
+<span class="font-label-caps text-[10px] text-on-primary-container mb-2 block uppercase tracking-tighter">International Event</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Tulip Technologies Participates in Hannover Messe</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Showcasing next-generation AI-driven logistics solutions at the world's leading industrial trade fair in Germany.</p>
+<div class="mt-auto">
+<a class="text-primary-container font-label-caps text-xs flex items-center gap-2 hover:opacity-70 transition-opacity" href="#">
+                                VIEW CASE STUDY
+                                <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<!-- News List Section -->
+<div class="space-y-8">
+<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant pb-4 mb-8">Previous Milestones</h2>
+<!-- List Item 1 -->
+<div class="flex flex-col md:flex-row gap-8 items-start py-6 group">
+<div class="w-full md:w-64 h-40 shrink-0 rounded-lg overflow-hidden">
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern architectural detail of a high-rise office building with glass and steel elements. The lighting is bright and airy, representing a clean light-mode corporate aesthetic. The composition emphasizes geometric precision and structural integrity, using a palette of soft greys and deep teal shadows to convey institutional authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZNNrr_bU6wr0AhvTku4Dn7b4BkvY7gUrWlA3H-e7W8G2gsBVOUFeowJt38VTu1obo13bTsFYgQAfvrz3JscmDOiyYPrsIvWpQhGljzzwe0Wm8FSvs19HdFg9DZUl6ta9nPZETQ9HOHuogcqAperI1jS7esY7fdiMNOiviGrQTdH_LYT6yR4FmV5MILDsfrfnFvT28d4HsnGJwYlD9GEv9ByEsovDbUFzEy3nXb7ShQ6rDcRBplYlfxTl_WsryNGtHkqoNcPnpfBI"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-4 mb-2">
+<span class="text-on-surface-variant font-label-caps text-xs uppercase">Investment</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-outline text-xs">Sept 12, 2024</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-primary-container transition-colors">Venture Capital Fund Launch for Saudi Tech Startups</h4>
+<p class="text-on-surface-variant font-body-md mb-4 max-w-3xl">Announcing a new $50M seed fund focused on industrial automation and IoT infrastructure in Riyadh, aligned with Vision 2030 objectives.</p>
+<button class="text-primary-container font-label-caps text-xs">FULL REPORT</button>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex flex-col md:flex-row gap-8 items-start py-6 group border-t border-outline-variant/30">
+<div class="w-full md:w-64 h-40 shrink-0 rounded-lg overflow-hidden">
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A high-end corporate boardroom meeting with a minimalist glass table and ergonomic designer chairs. The atmosphere is professional and collaborative, lit by soft overhead lights. The color scheme is grounded in neutral whites and slate blues, punctuated by subtle teal highlights on digital screens, reflecting a sophisticated industrial intelligence aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzxFUqzRCF-QoCM2X-V4iDBH6vx1EtercT_Uyshfm7EU3G_C5ebR3NPUZ4AB44JfmXKdRY5kj8pPwoZ0TbDOJj6kzaaLSAUzknXE8jKxufRcItATMQQFWVpE_9jSBgRHjESqqa01U6URiB-1QfJXT8bDONL8hIrvU-i38hDoNaLPMMBterkQm9SM0PZ6DrSTEbMYqfMRW2gDxCSFvD5Tce3yVNRPSgDqERrj31GvAyaa0TCmcY9nQLTYp2T_Nbjr1BCZ1jwLZMjeI"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-4 mb-2">
+<span class="text-on-surface-variant font-label-caps text-xs uppercase">Consulting</span>
+<span class="text-outline text-xs">•</span>
+<span class="text-outline text-xs">Aug 05, 2024</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-primary-container transition-colors">Strategic Advisory Panel for Turkish Manufacturing Hubs</h4>
+<p class="text-on-surface-variant font-body-md mb-4 max-w-3xl">Joining the executive board of the Istanbul Industrial Zone to oversee digital integration for over 200 manufacturing entities.</p>
+<button class="text-primary-container font-label-caps text-xs">FULL REPORT</button>
+</div>
+</div>
+</div>
+<!-- Newsletter Callout -->
+<section class="mt-24 p-12 rounded-lg bg-surface-container-low border border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">Executive Insights</h3>
+<p class="text-on-surface-variant font-body-md">Get monthly updates on industrial intelligence and investment trends directly from Abdullah Al-Olabi.</p>
+</div>
+<div class="flex w-full md:w-auto gap-2">
+<input class="bg-white border-none rounded-md px-4 py-3 w-full md:w-64 focus:ring-2 focus:ring-primary-container text-body-md outline-none" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white px-8 py-3 rounded-md font-label-caps text-xs whitespace-nowrap hover:bg-primary-container transition-colors">SUBSCRIBE</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 full-width py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-lg font-bold text-slate-900 dark:text-white">Abdullah Al-Olabi</span>
+<p class="font-['Inter'] text-xs font-light text-slate-500 max-w-xs">Pioneering industrial intelligence and strategic leadership across Middle Eastern and European markets.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Connect</span>
+<div class="flex flex-col gap-2">
+<a class="font-['Inter'] text-xs font-light text-slate-500 hover:text-teal-600 transition-opacity" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-xs font-light text-slate-500 hover:text-teal-600 transition-opacity" href="#">Email</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Locations</span>
+<div class="flex flex-col gap-2">
+<span class="font-['Inter'] text-xs font-light text-slate-500">Saudi Arabia</span>
+<span class="font-['Inter'] text-xs font-light text-slate-500">Turkey</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Inter'] text-xs font-light text-slate-500">© 2024 Abdullah Al-Olabi. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-teal-600 transition-colors" data-icon="policy">policy</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-teal-600 transition-colors" data-icon="gavel">gavel</span>
+</div>
+</div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="js/cms-loader.js"></script>
-<script>
-const params = new URLSearchParams(window.location.search);
-const slug = params.get('slug');
-const lang = params.get('lang') || 'ar';
-const imgBgsLocal = ['img-teal','img-blue','img-cyan','img-sky','img-indigo'];
-if (lang === 'en') {
-  document.documentElement.lang = 'en';
-  document.documentElement.dir = 'ltr';
-  document.getElementById('backLabel').textContent = '← Back to News';
-}
-async function loadDetail() {
-  const el = document.getElementById('detailContent');
-  if (!slug) { el.innerHTML = lang==='ar'?'الخبر غير موجود':'News item not found.'; return; }
-  const all = await getNews();
-  const item = all.find(i => i.slug === slug);
-  if (!item) { el.innerHTML = lang==='ar'?'الخبر غير موجود':'News item not found.'; return; }
-  const title   = lang==='ar'?(item.title_ar||item.title_en):(item.title_en||item.title_ar);
-  const content = lang==='ar'?(item.content_ar||item.body||item.content_en):(item.content_en||item.body||item.content_ar);
-  const cat     = lang==='ar'?(item.category_ar||item.category):(item.category_en||item.category);
-  const emoji   = getEmoji(item.category||item.category_en||item.category_ar);
-  const date    = fmtDate(item.date, lang);
-  const html    = typeof marked!=='undefined'?marked.parse(content||''):(content||'').replace(/\n\n/g,'<br><br>');
-  const bg      = imgBgsLocal[0];
-  document.title = title + ' | عبدالله العلبي';
-  el.innerHTML = `
-    <div class="detail-hero ${bg}">${emoji}</div>
-    <p class="detail-cat">${cat||''}</p>
-    <h1 class="detail-title">${title||''}</h1>
-    <p class="detail-date">${date}</p>
-    <div class="detail-body">${html}</div>
-    <a class="back-btn" href="javascript:history.back()">${lang==='ar'?'← العودة للأخبار':'← Back to News'}</a>`;
-}
-loadDetail();
-</script>
-</body>
-</html>
+</body></html>
