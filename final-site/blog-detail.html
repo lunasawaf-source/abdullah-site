@@ -1,77 +1,294 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مقال | عبدالله العلبي</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#eff4ff",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#31666e",
+                    "outline": "#70797a",
+                    "on-tertiary-fixed": "#00201c",
+                    "on-primary-container": "#84b8c2",
+                    "on-surface": "#0b1c30",
+                    "error-container": "#ffdad6",
+                    "secondary": "#4059aa",
+                    "inverse-surface": "#213145",
+                    "tertiary-fixed": "#62fae3",
+                    "on-surface-variant": "#40484a",
+                    "secondary-fixed-dim": "#b6c4ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#1d3989",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#001f24",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#dce9ff",
+                    "primary-fixed": "#b6ecf5",
+                    "background": "#f8f9ff",
+                    "tertiary": "#00332d",
+                    "on-primary-fixed-variant": "#134e56",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#003239",
+                    "surface-container": "#e5eeff",
+                    "primary-container": "#0d4a52",
+                    "outline-variant": "#c0c8ca",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#004c43",
+                    "surface-variant": "#d3e4fe",
+                    "primary-fixed-dim": "#9acfd9",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#d3e4fe",
+                    "inverse-primary": "#9acfd9",
+                    "secondary-container": "#8fa7fe",
+                    "on-secondary-fixed-variant": "#264191",
+                    "on-background": "#0b1c30",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#dce1ff",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "surface": "#f8f9ff",
+                    "surface-bright": "#f8f9ff",
+                    "on-tertiary-container": "#00c5b1",
+                    "tertiary-fixed-dim": "#3cddc7",
+                    "on-secondary-fixed": "#00164e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-padding": "80px",
+                    "header-height": "72px",
+                    "gutter": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Space Grotesk"],
+                    "display-xl": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
 <style>
-:root{--teal:#0EA5C9;--teal-dark:#0C7EA0;--blue:#3B82F6;--bg:#F7FBFE;--bg-2:#EEF7FC;--text-dark:#0F2A35;--text-mid:#2C5F73;--text-muted:#6B9AAA;--border:rgba(14,165,201,0.15);--shadow:0 4px 24px rgba(14,165,201,0.10);}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--text-dark);font-family:'Tajawal',sans-serif;}
-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:white;border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(14,165,201,0.07);}
-.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
-.nav-back{color:var(--teal);font-size:14px;font-weight:600;text-decoration:none;}
-.nav-back:hover{color:var(--teal-dark);}
-.detail-wrapper{max-width:760px;margin:0 auto;padding:60px 40px 100px;}
-.blog-tag-top{padding:4px 14px;border-radius:30px;background:rgba(14,165,201,0.08);border:1px solid var(--border);font-size:11px;color:var(--teal);letter-spacing:2px;text-transform:uppercase;display:inline-block;margin-bottom:20px;}
-.detail-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,44px);font-weight:900;color:var(--text-dark);line-height:1.25;margin-bottom:14px;}
-.detail-date{font-size:14px;color:var(--text-muted);margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border);}
-.detail-body{font-size:16px;color:var(--text-mid);line-height:2.1;}
-.detail-body p{margin-bottom:20px;}
-.detail-body strong{color:var(--text-dark);}
-.back-btn{display:inline-flex;align-items:center;gap:8px;margin-top:48px;padding:12px 28px;border-radius:8px;border:1.5px solid var(--teal);color:var(--teal);font-family:'Tajawal',sans-serif;font-size:14px;font-weight:600;cursor:pointer;background:white;transition:all .3s;text-decoration:none;}
-.back-btn:hover{background:var(--bg-2);}
-.loading{text-align:center;padding:100px 40px;color:var(--text-muted);font-size:16px;}
-footer{background:linear-gradient(135deg,var(--teal-dark),var(--blue));padding:32px 60px;display:flex;justify-content:space-between;align-items:center;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:18px;color:white;}
-.footer-copy{font-size:13px;color:rgba(255,255,255,0.65);}
-html[lang="en"]{direction:ltr;}
-html[lang="en"] nav{flex-direction:row-reverse;}
-</style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
-<body>
-<nav>
-  <a class="nav-logo" href="index.html">AO</a>
-  <a class="nav-back" href="javascript:history.back()" id="backLabel">← العودة للمدونة</a>
-</nav>
-<div class="detail-wrapper">
-  <div id="detailContent" class="loading">جاري التحميل... / Loading...</div>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-[20px] shadow-sm border-b border-white/20">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 h-20">
+<div class="text-2xl font-black bg-gradient-to-r from-teal-700 to-blue-600 bg-clip-text text-transparent">
+                AO
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-body-md text-sm font-medium tracking-wide">
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-500 transition-all duration-300 active:scale-95" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-500 transition-all duration-300 active:scale-95" href="#">Latest News</a>
+<a class="text-[#0D4A52] dark:text-teal-400 font-bold border-b-2 border-[#0D4A52] pb-1 hover:text-teal-500 transition-all duration-300 active:scale-95" href="#">Blog</a>
 </div>
-<footer>
-  <div class="footer-logo">عبدالله العلبي | Abdullah Al-Olabi</div>
-  <p class="footer-copy">© 2026 — جميع الحقوق محفوظة / All Rights Reserved</p>
+<div class="flex items-center space-x-6">
+<button class="text-[#0D4A52] dark:text-teal-400 font-body-md text-sm font-medium hover:opacity-80 transition-opacity">English</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-body-md text-sm font-semibold active:scale-95 transition-transform duration-200">
+                    Contact Me
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-16">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-[0.2em] mb-4 block">Thought Leadership</span>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6">Perspectives on <span class="text-surface-tint">Industrial Intelligence.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Exploring the intersection of high-level finance, Industry 4.0, and the strategic automation shaping our collective future.
+            </p>
+</header>
+<!-- Category Filter -->
+<div class="flex flex-wrap gap-3 mb-12 border-b border-outline-variant pb-8">
+<button class="px-5 py-2 rounded-full bg-primary-container text-on-primary-container font-label-caps text-sm">All Articles</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-sm hover:bg-primary-container hover:text-white transition-colors">Automation &amp; Robotics</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-sm hover:bg-primary-container hover:text-white transition-colors">Investment &amp; Finance</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-sm hover:bg-primary-container hover:text-white transition-colors">Industry 4.0</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-sm hover:bg-primary-container hover:text-white transition-colors">Economic Development</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-sm hover:bg-primary-container hover:text-white transition-colors">Future Vision</button>
+</div>
+<!-- Featured Article (Bento Style Large) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<article class="lg:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-[16/9] mb-6">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated industrial laboratory featuring a sleek robotic arm working with precision on a complex circuit board. The environment is bathed in a cool, high-tech blue and teal light-mode aesthetic, with soft bokeh highlighting the intricate metallic textures. The scene conveys a sense of advanced engineering and institutional stability, using clean lines and a minimalist architectural background to emphasize technological innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdPhKOUf1_U-2EsE2-Asoey_FxnabZkEPpSyj_uW7kNAPjotlKvq990ph5LRPmiU_Y7QY2HbkV4NYqN9J6awnvC4g9pPDF7QLektddmGObe_5jGIau7tgQgG1QueXOV-oKPUKdg3hjOAUlHD037cS8F4UIBeF8-r71PYNPh0ZIlLdIXzZQ8ScNp33CyUDsDIMqa-v2I9_gZVf07mNdAXoFuwsk0_lPjYZVZU_wM7YIJ6gI1AC1VSd0uXug-fkli3qOA9iE7p6eryM"/>
+<div class="absolute top-6 left-6">
+<span class="bg-primary text-white px-4 py-1.5 rounded-full font-label-caps text-xs">Featured: Future Vision</span>
+</div>
+</div>
+<div class="max-w-3xl">
+<h2 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary-container transition-colors">The Sovereign Wealth of Intelligent Infrastructure</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">How nation-states are pivoting their investment strategies toward automated manufacturing hubs as the new gold standard for economic stability in the 2030s.</p>
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">person</span>
+</div>
+<div>
+<p class="font-label-caps text-xs text-on-surface">Abdullah Al-Olabi</p>
+<p class="font-body-md text-xs text-on-surface-variant">March 12, 2024 • 12 min read</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Secondary Featured -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A clean, minimalist high-angle shot of a digital banking interface displayed on a premium tablet device. The lighting is bright and airy, reflecting a modern corporate office setting with subtle glass reflections. The color palette focuses on deep teals and soft whites, suggesting a fusion of traditional finance and modern digital innovation. The mood is professional, precise, and forward-thinking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcoM4iEIKTVlRkSSC4z62AEG9oRtdkOz1VhaOls4L7SzJcAtZj8XyyGF_Kp1nGdY4Bbxbe2LA1WYx6MQCl-J46k_eXUkFSx4_vLTY08tvEiIBOPN0EDR8GSLDIsl-AwLKVL3yxnKCAOPmn4htOC8nPNmT8mbpDyJKoPwu3zy5Hm4UfLMI1yoSzvvJk4KXcxepzYjsHMS1zeuArVocenVlwIhR8sclXpRxo9bIDAz-zaYf52R3AmaHp9yGKPBsQu7xcvDdi1mfppW4"/>
+</div>
+<span class="font-label-caps text-[10px] text-primary-container uppercase tracking-wider mb-2 block">Investment &amp; Finance</span>
+<h3 class="font-headline-md text-headline-md text-xl mb-2 group-hover:text-primary-container transition-colors">Venture Capital in the Age of Robotics</h3>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-2">Decentralizing manufacturing through micro-factory investments and automated supply chains.</p>
+</article>
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="An abstract visualization of Industry 4.0 data streams, featuring glowing teal light particles forming geometric patterns across a dark, polished surface. The aesthetic is industrial yet elegant, with a high degree of visual depth achieved through layering and transparency. Soft gradients of blue and green create a sense of technological flow and intelligent design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs9Kq20O-3mGFgkEv3uXUznYah_pa0PozmpuEaB0R8Azqu5x759dQjU0MRzw0ER-OED-aKSzZ6B9meJ5nB6tL2IK-P3IFAlUDKfUFlPSVbQGp_L5Cdw6PnUdn8895JQ8VS9BqnyfOClqrTwJMzsNEYa66cxrTo9Ww1BxteIartK18VHrjRKwJpZDhSJSc-GmzRXsP1VC31_vZSh4E8tmGr5BN0pdpZTtk-jm_fSk9jtJmfgzwIBoltE2jNDNScDIMAXw3ANv2b0b8"/>
+</div>
+<span class="font-label-caps text-[10px] text-primary-container uppercase tracking-wider mb-2 block">Industry 4.0</span>
+<h3 class="font-headline-md text-headline-md text-xl mb-2 group-hover:text-primary-container transition-colors">The Digital Twin Paradox</h3>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-2">Why real-time simulation is becoming the most valuable asset in modern industrial consulting.</p>
+</article>
+</div>
+</div>
+<!-- Magazine Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Article 1 -->
+<article class="group cursor-pointer border-t border-outline-variant pt-8">
+<span class="font-label-caps text-[10px] text-primary-container uppercase tracking-widest mb-4 block">Automation &amp; Robotics</span>
+<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-primary-container transition-colors">Human-Machine Collaboration in Banking</h4>
+<p class="font-body-md text-on-surface-variant mb-6 text-sm">Examining the ethical and operational shifts as AI takes the lead in predictive risk assessment for global markets.</p>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-xs text-on-surface-variant">Feb 28, 2024</span>
+<span class="material-symbols-outlined text-primary-container">arrow_outward</span>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="group cursor-pointer border-t border-outline-variant pt-8">
+<span class="font-label-caps text-[10px] text-primary-container uppercase tracking-widest mb-4 block">Economic Development</span>
+<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-primary-container transition-colors">The Saudi 2030 Industrial Shift</h4>
+<p class="font-body-md text-on-surface-variant mb-6 text-sm">How the Kingdom is leveraging robotics to transform its domestic manufacturing landscape into a global powerhouse.</p>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-xs text-on-surface-variant">Feb 15, 2024</span>
+<span class="material-symbols-outlined text-primary-container">arrow_outward</span>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="group cursor-pointer border-t border-outline-variant pt-8">
+<span class="font-label-caps text-[10px] text-primary-container uppercase tracking-widest mb-4 block">Future Vision</span>
+<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-primary-container transition-colors">Quantum Computing in Supply Chains</h4>
+<p class="font-body-md text-on-surface-variant mb-6 text-sm">Predicting the unpredictable: How quantum algorithms will solve the world's most complex logistical bottlenecks.</p>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-xs text-on-surface-variant">Jan 22, 2024</span>
+<span class="material-symbols-outlined text-primary-container">arrow_outward</span>
+</div>
+</article>
+<!-- Article 4 -->
+<article class="group cursor-pointer border-t border-outline-variant pt-8">
+<span class="font-label-caps text-[10px] text-primary-container uppercase tracking-widest mb-4 block">Industry 4.0</span>
+<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-primary-container transition-colors">Energy Efficiency through Smart Grids</h4>
+<p class="font-body-md text-on-surface-variant mb-6 text-sm">The industrial imperative for sustainable automation and its direct impact on long-term corporate valuation.</p>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-xs text-on-surface-variant">Jan 05, 2024</span>
+<span class="material-symbols-outlined text-primary-container">arrow_outward</span>
+</div>
+</article>
+<!-- Article 5 -->
+<article class="group cursor-pointer border-t border-outline-variant pt-8">
+<span class="font-label-caps text-[10px] text-primary-container uppercase tracking-widest mb-4 block">Investment &amp; Finance</span>
+<h4 class="font-headline-md text-headline-md mb-4 group-hover:text-primary-container transition-colors">Tokenizing Industrial Assets</h4>
+<p class="font-body-md text-on-surface-variant mb-6 text-sm">The emergence of blockchain-backed fractional ownership in large-scale automated production facilities.</p>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-xs text-on-surface-variant">Dec 18, 2023</span>
+<span class="material-symbols-outlined text-primary-container">arrow_outward</span>
+</div>
+</article>
+<!-- Newsletter Signup Card (Industrial Design) -->
+<div class="bg-surface-container-high rounded-lg p-8 flex flex-col justify-center">
+<h4 class="font-headline-md text-headline-md mb-4">Stay at the Forefront</h4>
+<p class="font-body-md text-sm text-on-surface-variant mb-6">Receive executive briefings on industrial trends directly to your inbox.</p>
+<form class="space-y-4">
+<input class="w-full bg-white border-none rounded-md px-4 py-3 text-sm focus:ring-2 focus:ring-primary-container" placeholder="Email Address" type="email"/>
+<button class="w-full bg-primary-container text-on-primary-container font-label-caps py-3 rounded-md hover:opacity-90 transition-opacity">Subscribe</button>
+</form>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center space-x-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="font-label-caps text-sm text-on-surface">Page 1 of 4</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 full-width py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 max-w-7xl mx-auto items-start">
+<div class="space-y-4">
+<div class="text-lg font-bold text-slate-900 dark:text-white">Abdullah Al-Olabi</div>
+<p class="font-['Inter'] text-xs font-light text-slate-500 max-w-xs leading-relaxed">
+                    Bridging the gap between institutional investment and industrial automation for a smarter economic future.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest">Connect</h5>
+<div class="flex flex-col space-y-2 font-['Inter'] text-xs font-light">
+<a class="text-slate-500 hover:text-teal-600 transition-opacity" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-teal-600 transition-opacity" href="#">Email</a>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest">Global Reach</h5>
+<div class="flex flex-col space-y-2 font-['Inter'] text-xs font-light">
+<span class="text-slate-500">Saudi Arabia</span>
+<span class="text-slate-500">Turkey</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Inter'] text-xs font-light text-slate-500">© 2024 Abdullah Al-Olabi. All rights reserved.</p>
+<div class="flex space-x-6">
+<a class="text-slate-500 text-xs hover:text-teal-600 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-slate-500 text-xs hover:text-teal-600 transition-opacity" href="#">Terms of Service</a>
+</div>
+</div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="js/cms-loader.js"></script>
-<script>
-const params = new URLSearchParams(window.location.search);
-const slug = params.get('slug');
-const lang = params.get('lang') || 'ar';
-if (lang === 'en') {
-  document.documentElement.lang = 'en';
-  document.documentElement.dir = 'ltr';
-  document.getElementById('backLabel').textContent = '← Back to Blog';
-}
-async function loadDetail() {
-  const el = document.getElementById('detailContent');
-  if (!slug) { el.innerHTML = lang==='ar'?'المقال غير موجود':'Post not found.'; return; }
-  const all = await getBlog();
-  const item = all.find(i => i.slug === slug);
-  if (!item) { el.innerHTML = lang==='ar'?'المقال غير موجود':'Post not found.'; return; }
-  const title   = lang==='ar'?(item.title_ar||item.title_en):(item.title_en||item.title_ar);
-  const content = lang==='ar'?(item.content_ar||item.body||item.content_en):(item.content_en||item.body||item.content_ar);
-  const tag     = lang==='ar'?(item.tag_ar||item.category_ar||item.category):(item.tag_en||item.category_en||item.category);
-  const date    = fmtDate(item.date, lang);
-  const html    = typeof marked!=='undefined'?marked.parse(content||''):(content||'').replace(/\n\n/g,'<br><br>');
-  document.title = title + ' | عبدالله العلبي';
-  el.innerHTML = `
-    <span class="blog-tag-top">${tag||''}</span>
-    <h1 class="detail-title">${title||''}</h1>
-    <p class="detail-date">${date}</p>
-    <div class="detail-body">${html}</div>
-    <a class="back-btn" href="javascript:history.back()">${lang==='ar'?'← العودة للمدونة':'← Back to Blog'}</a>`;
-}
-loadDetail();
-</script>
-</body>
-</html>
+</body></html>
