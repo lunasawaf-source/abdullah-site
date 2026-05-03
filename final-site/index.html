@@ -710,6 +710,9 @@ function setLang(l, btn) {
   btn.classList.add('active');
   sliderCur = 0; updateSliderPos();
   _newsLoaded = false; _blogLoaded = false;
+  // reload CMS content with new language
+  if (typeof loadHomepageCMS === 'function') loadHomepageCMS(l).catch(() => {});
+  if (typeof initHomepage === 'function') initHomepage(l).catch(() => {});
   const active = document.querySelector('.page.active');
   if (active && active.id !== 'page-home') showPage(active.id.replace('page-',''));
 }
