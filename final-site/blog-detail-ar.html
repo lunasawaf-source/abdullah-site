@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;family=Space+Grotesk:wght@600&amp;family=Noto+Kufi+Arabic:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#eff4ff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#31666e",
+                        "outline": "#70797a",
+                        "on-tertiary-fixed": "#00201c",
+                        "on-primary-container": "#84b8c2",
+                        "on-surface": "#0b1c30",
+                        "error-container": "#ffdad6",
+                        "secondary": "#4059aa",
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed": "#62fae3",
+                        "on-surface-variant": "#40484a",
+                        "secondary-fixed-dim": "#b6c4ff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#1d3989",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#001f24",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#dce9ff",
+                        "primary-fixed": "#b6ecf5",
+                        "background": "#f8f9ff",
+                        "tertiary": "#003239",
+                        "on-primary-fixed-variant": "#134e56",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary": "#003239",
+                        "surface-container": "#e5eeff",
+                        "primary-container": "#0d4a52",
+                        "outline-variant": "#c0c8ca",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#004c43",
+                        "surface-variant": "#d3e4fe",
+                        "primary-fixed-dim": "#9acfd9",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-primary": "#9acfd9",
+                        "secondary-container": "#8fa7fe",
+                        "on-secondary-fixed-variant": "#264191",
+                        "on-background": "#0b1c30",
+                        "surface-dim": "#cbdbf5",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#dce1ff",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "surface": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-container": "#00c5b1",
+                        "tertiary-fixed-dim": "#3cddc7",
+                        "on-secondary-fixed": "#00164e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-padding": "80px",
+                        "header-height": "72px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Noto Kufi Arabic", "Inter"],
+                        "body-md": ["Noto Kufi Arabic", "Inter"],
+                        "label-caps": ["Space Grotesk", "Noto Kufi Arabic"],
+                        "display-xl": ["Noto Kufi Arabic", "Inter"],
+                        "headline-md": ["Noto Kufi Arabic", "Inter"],
+                        "headline-lg": ["Noto Kufi Arabic", "Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Noto Kufi Arabic', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-[20px] border-b border-white/20 shadow-sm h-20">
+<div class="max-w-7xl mx-auto px-8 flex justify-between items-center h-full">
+<!-- Brand Logo -->
+<div class="text-2xl font-black bg-gradient-to-r from-teal-700 to-blue-600 bg-clip-text text-transparent">AO</div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8 font-body-md text-sm font-medium tracking-wide">
+<a class="text-slate-600 hover:text-teal-500 transition-all duration-300" href="#">Home</a>
+<a class="text-slate-600 hover:text-teal-500 transition-all duration-300" href="#">Latest News</a>
+<a class="text-[#0D4A52] font-bold border-b-2 border-[#0D4A52] pb-1" href="#">Blog</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button class="font-body-md text-sm text-slate-600 hover:text-teal-500 transition-all">English</button>
+<button class="bg-gradient-to-r from-primary-container to-secondary-container text-white px-6 py-2.5 rounded-full font-body-md text-sm font-semibold active:scale-95 transition-transform duration-200">Contact Me</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Article Hero Section -->
+<section class="relative w-full h-[614px] min-h-[400px] flex items-end pb-12 px-8">
+<div class="absolute inset-0 z-0">
+<img alt="Industrial Intelligence Hero Image" class="w-full h-full object-cover" data-alt="A high-tech industrial facility interior featuring sleek automated machinery and glowing blue LED interfaces. The atmosphere is professional and innovative, with a bright, minimalist lighting scheme that emphasizes clean lines and precision engineering. The color palette centers on deep teals and metallic silvers, creating a sense of industrial intelligence and forward-thinking leadership in the manufacturing sector." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8jcbQAcSFbzqqjBqhbckUhc92CbNXfQq8JlbpciExiLXWDOtBMXtwcysL2hDVDI9iLYNzKnB_sorbA3-kvnI2PYLCcyxi4VqsSSiwRIS5Gmh1nT1dAOSIZggIVedQoIVJLCXpT0Jj919iemmPaFivelvPI_nFallFZb9F2UhfVVg2xhH99hqdowtGuzrrCpma4P4cqFjGIm_hL22zVPhhKvewv7Da_ro8fCPxwOqpf5tIHhznFDfkOh9l5ouftHkiG1Ze-oyC7no"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto w-full">
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-primary-container/10 text-primary-container px-4 py-1 rounded-full text-label-caps font-semibold">تحول رقمي</span>
+<span class="text-slate-500 font-body-md text-sm">١٥ مايو ٢٠٢٤</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6 leading-tight">مستقبل الذكاء الصناعي في قطاع التصنيع الحديث</h1>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<p class="font-headline-md text-sm text-on-surface">عبد الله العولبي</p>
+<p class="font-body-md text-xs text-slate-500">مستشار استراتيجي في التكنولوجيا</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Article Content Canvas -->
+<article class="max-w-4xl mx-auto px-8 py-16">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Sidebar Tools -->
+<aside class="md:col-span-1 flex md:flex-col gap-6 justify-center md:justify-start">
+<button class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white hover:shadow-md transition-all text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white hover:shadow-md transition-all text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white hover:shadow-md transition-all text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">print</span>
+</button>
+</aside>
+<!-- Body Text -->
+<div class="md:col-span-11 space-y-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        يواجه القطاع الصناعي اليوم تحولاً جذرياً مدفوعاً بتقنيات الذكاء الاصطناعي والتعلم الآلي. لم يعد الأمر مجرد أتمتة للمهام الروتينية، بل أصبح يتعلق ببناء نظم ذكية قادرة على اتخاذ قرارات معقدة في الوقت الفعلي لتحسين الكفاءة وتقليل الهدر.
+                    </p>
+<h2 class="font-headline-lg text-headline-lg text-primary border-r-4 border-primary pr-6 py-2">الثورة الرابعة وما بعدها</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        في قلب هذا التحول تكمن البيانات. المصانع الحديثة تولد كميات هائلة من البيانات من آلاف المستشعرات. التحدي الحقيقي ليس في جمع هذه البيانات، بل في استخلاص رؤى قابلة للتنفيذ منها. هنا يأتي دور الذكاء الصناعي لربط النقاط وتوقع الأعطال قبل وقوعها من خلال ما يعرف بالصيانة التنبؤية.
+                    </p>
+<!-- Industrial Glass Card for Insight -->
+<div class="bg-white/40 backdrop-blur-md border border-white/60 p-8 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-teal-600 mb-4 text-4xl" data-weight="fill">lightbulb</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">رؤية استراتيجية</h3>
+<p class="font-body-md text-on-surface-variant italic">
+                            "الشركات التي تتبنى الذكاء الاصطناعي اليوم ليست فقط تحسن عملياتها، بل تعيد صياغة نموذج عملها بالكامل لتكون أكثر مرونة في مواجهة تقلبات السوق العالمية."
+                        </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        علاوة على ذلك، يساهم الذكاء الاصطناعي في تحسين سلاسل الإمداد بشكل غير مسبوق. من خلال تحليل الأنماط العالمية، يمكن للأنظمة الذكية توقع الطلب وتعديل جداول الإنتاج تلقائياً، مما يقلل من المخزون الراكد ويزيد من سرعة الاستجابة لمتطلبات العملاء.
+                    </p>
+<ul class="space-y-4 pr-6">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-teal-600 mt-1">check_circle</span>
+<span class="font-body-md">زيادة الإنتاجية بنسبة تصل إلى ٣٠٪ عبر الأتمتة الذكية.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-teal-600 mt-1">check_circle</span>
+<span class="font-body-md">تقليل تكاليف الصيانة بنسبة ٢٥٪ باستخدام الخوارزميات التنبؤية.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-teal-600 mt-1">check_circle</span>
+<span class="font-body-md">تحسين استهلاك الطاقة والموارد لتعزيز الاستدامة الصناعية.</span>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- Related Articles Section -->
+<section class="bg-surface-container-low py-20 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">مقالات ذات صلة</h2>
+<p class="font-body-md text-slate-500">اكتشف المزيد عن الرؤى الصناعية والتقنية</p>
+</div>
+<a class="text-teal-600 font-bold flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                        عرض الكل
+                        <span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Related Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative h-64 overflow-hidden rounded-lg mb-4">
+<img alt="Tech Circuit Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of a complex circuit board with glowing data pathways in shades of neon blue and teal. The image uses a shallow depth of field to focus on the intricate architecture of the processor, suggesting high-end computing and advanced infrastructure. The lighting is low-key and professional, suitable for a venture capital or technological consulting context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFICmtGhr8URl2SXEpFPSm7a2fEsuBvupsOgqc3V9E3xipkAGrPPUzoeufM52YzZDdAH5fuvZ-FPwghVp1BM8NjT1CMsUrVjP1SrnjszvT8ysqOjicKqtD5KQ6qpaYcS3vj-q5oVYlDH2bOVutzh6xnLQQCloAJBNfufLOyJCFSPmt8J3ceZHikfjdR75qoC8bs9_koOK12GWIcFVlL8lzEh0SFw5j-PFhTSt-xIQ6aN56P6SNIzC2faRdIBftLrec2wVU8ISm5mg"/>
+</div>
+<h3 class="font-headline-md text-primary mb-2 group-hover:text-teal-600 transition-colors">البنية التحتية السحابية في المؤسسات المالية</h3>
+<p class="font-body-md text-sm text-slate-500 line-clamp-2">كيف تساهم الحوسبة السحابية في تسريع وتيرة الابتكار في الخدمات المصرفية الحديثة.</p>
+</div>
+<!-- Related Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative h-64 overflow-hidden rounded-lg mb-4">
+<img alt="Cybersecurity Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist workspace featuring high-end hardware and multiple monitors displaying complex data visualizations. The environment is flooded with soft natural light, creating a bright and airy atmosphere that reflects professional clarity and institutional stability. The color scheme is dominated by white, light grey, and subtle teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI9Eb-bLB9ph_fFZPyMUXd_HiIa88d2TTcFJrT-WLSPxowNm9o_GU4Exedo6DVk8jSKFQUqz_OIAU7PF0coji7DWXI2oPXZ6fGdGLun2Dw5x4p-0hmrHiPEfgZ9UNdZFFObCr6fRWZgBHN-J6RoYQ0W82NMMJF_VQbxSbisUY4BloQkBjGAniI0sEHWk_Rqv5dUBqLYmFPvUq1xQIubUk2wACAbE-dhfnA49Khlj2AHUjrAXOPqTkzJ6h6ima26bz94U79MI5rkr8"/>
+</div>
+<h3 class="font-headline-md text-primary mb-2 group-hover:text-teal-600 transition-colors">الأمن السيبراني في عصر الصناعة ٤.٠</h3>
+<p class="font-body-md text-sm text-slate-500 line-clamp-2">تأمين الأنظمة الصناعية المتصلة ضد التهديدات المتطورة في بيئة العمل الرقمية.</p>
+</div>
+<!-- Related Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative h-64 overflow-hidden rounded-lg mb-4">
+<img alt="Global Logistics Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylized 3D data visualization showing global logistics flows as glowing lines of light connecting major world hubs. The background is a deep, professional blue-black, with the data lines appearing in vibrant teal and silver. The style is highly sophisticated and clean, representing global connectivity and strategic oversight in international trade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuDv-72HaCtyVQsxdfOSERlFug-ZOIAczaJDWWNjKyhcWk-Kwpz5RucMXf4avJlfeccB_BjiP_ygKcGq-IwbTPFpExsbelidyC4VY5aP1uU6lBdmWy9GSah_dpfNUgXS134526bwpZki_P-DxxVmv0OkpyppzWF-_h7iG8W_iGr6wSzfKdKiuii6dDsq0Hoz2qBSx0h5E4OkHvK16Y_xWdhpczZY_SCSKxyzrwXNBixiKAWekJEO2RtXWE0h2PKxIYvyJm0yYl3XE"/>
+</div>
+<h3 class="font-headline-md text-primary mb-2 group-hover:text-teal-600 transition-colors">تحسين سلاسل الإمداد العالمية بالبيانات الضخمة</h3>
+<p class="font-body-md text-sm text-slate-500 line-clamp-2">استخدام التحليلات المتقدمة لمواجهة التحديات اللوجستية في السوق العالمي المتغير.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-slate-50 py-12 border-t border-slate-200">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Brand Section -->
+<div class="space-y-4">
+<div class="text-lg font-bold text-slate-900">Abdullah Al-Olabi</div>
+<p class="font-body-md text-xs font-light text-slate-500 max-w-xs leading-relaxed">
+                    مستشار استراتيجي متخصص في التحول الرقمي والابتكار الصناعي، أعمل على سد الفجوة بين التكنولوجيا التقليدية والمستقبل الرقمي.
+                </p>
+</div>
+<!-- Links Section -->
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-xs text-slate-400 mb-2">روابط سريعة</span>
+<div class="grid grid-cols-2 gap-4">
+<a class="font-body-md text-xs text-slate-500 hover:text-teal-600 transition-opacity" href="#">LinkedIn</a>
+<a class="font-body-md text-xs text-slate-500 hover:text-teal-600 transition-opacity" href="#">Email</a>
+<a class="font-body-md text-xs text-slate-500 hover:text-teal-600 transition-opacity" href="#">Saudi Arabia</a>
+<a class="font-body-md text-xs text-slate-500 hover:text-teal-600 transition-opacity" href="#">Turkey</a>
+</div>
+</div>
+<!-- Copyright Section -->
+<div class="flex flex-col justify-between items-end">
+<div class="flex gap-4 mb-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">language</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">rss_feed</span>
+</div>
+<p class="font-body-md text-xs font-light text-slate-500 text-left md:text-right">
+                    © 2024 عبدالله العولبي. جميع الحقوق محفوظة.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

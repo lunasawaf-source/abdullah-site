@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f8f9ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "on-tertiary-fixed": "#00201c",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#b6ecf5",
+                    "on-primary-fixed": "#001f24",
+                    "surface-container-high": "#dce9ff",
+                    "on-tertiary-fixed-variant": "#005047",
+                    "primary-fixed-dim": "#9acfd9",
+                    "on-primary-container": "#84b8c2",
+                    "inverse-primary": "#9acfd9",
+                    "on-tertiary-container": "#00c5b1",
+                    "surface-container-highest": "#d3e4fe",
+                    "background": "#f8f9ff",
+                    "on-secondary-fixed": "#00164e",
+                    "secondary": "#4059aa",
+                    "secondary-container": "#8fa7fe",
+                    "surface-tint": "#31666e",
+                    "on-secondary-container": "#1d3989",
+                    "on-primary-fixed-variant": "#134e56",
+                    "secondary-fixed": "#dce1ff",
+                    "on-surface": "#0b1c30",
+                    "primary": "#003239",
+                    "tertiary-fixed": "#62fae3",
+                    "primary-container": "#0d4a52",
+                    "tertiary-container": "#004c43",
+                    "on-secondary-fixed-variant": "#264191",
+                    "on-surface-variant": "#40484a",
+                    "tertiary-fixed-dim": "#3cddc7",
+                    "outline": "#70797a",
+                    "inverse-surface": "#213145",
+                    "surface": "#f8f9ff",
+                    "surface-container-low": "#eff4ff",
+                    "on-background": "#0b1c30",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#00332d",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#b6c4ff",
+                    "outline-variant": "#c0c8ca",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-padding": "80px",
+                    "base": "8px",
+                    "header-height": "72px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter", "sans-serif"],
+                    "display-xl": ["Inter", "sans-serif"],
+                    "headline-md": ["Inter", "sans-serif"],
+                    "body-lg": ["Inter", "sans-serif"],
+                    "label-caps": ["Space Grotesk", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .industrial-grid {
+            background-image: radial-gradient(#0d4a52 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .active-nav {
+            border-bottom: 2px solid #0D4A52;
+            padding-bottom: 4px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-white/20 h-20 flex items-center">
+<nav class="max-w-7xl mx-auto w-full px-8 flex justify-between items-center flex-row-reverse">
+<!-- Brand Logo -->
+<div class="text-2xl font-black bg-gradient-to-r from-teal-700 to-blue-600 bg-clip-text text-transparent">AO</div>
+<!-- Navigation Links -->
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-[#0D4A52] font-bold active-nav font-['Inter'] text-sm tracking-wide" href="#">الرئيسية</a>
+<a class="text-slate-600 hover:text-teal-500 transition-all duration-300 font-['Inter'] text-sm tracking-wide" href="#profile">الملف الشخصي</a>
+<a class="text-slate-600 hover:text-teal-500 transition-all duration-300 font-['Inter'] text-sm tracking-wide" href="#ventures">المشاريع</a>
+<a class="text-slate-600 hover:text-teal-500 transition-all duration-300 font-['Inter'] text-sm tracking-wide" href="#roles">المناصب</a>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-4">
+<button class="bg-[#0D4A52] text-white px-6 py-2 rounded-full font-bold text-sm hover:scale-95 transition-transform duration-200">اتصل بي</button>
+<button class="text-[#0D4A52] font-medium text-sm hover:opacity-80 transition-opacity">English</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 industrial-grid"></div>
+<div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center w-full">
+<div class="relative z-10 space-y-8">
+<div class="inline-flex items-center gap-2 bg-primary-container/10 px-4 py-2 rounded-full border border-primary-container/20">
+<span class="material-symbols-outlined text-[#0D4A52] text-lg" data-weight="fill">verified</span>
+<span class="text-[#0D4A52] font-label-caps text-label-caps">MIT Industry 4.0 Certified</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-primary leading-tight">
+                        عبد الله عبد الملك العلبي
+                    </h1>
+<p class="text-headline-md font-headline-md text-on-surface-variant max-w-xl">
+                        رائد أعمال ومستثمر وخبير صناعي متخصص في التحول الرقمي والذكاء الاصطناعي الصناعي.
+                    </p>
+<p class="text-body-lg font-body-lg text-slate-600 leading-relaxed">
+                        رئيس مجلس إدارة المصرف الصناعي السوري ومؤسس مشاريع رائدة في الشرق الأوسط، يجمع بين القيادة المؤسسية والابتكار التكنولوجي لتشكيل مستقبل الصناعة.
+                    </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-gradient-to-r from-teal-800 to-blue-700 text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all">استعرض الملف المهني</button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg font-bold hover:bg-primary/5 transition-all">تواصل للتعاون</button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-xl overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a distinguished Middle Eastern businessman in a modern, light-filled office environment. He is wearing a tailored navy blue suit, projecting an aura of industrial authority and strategic leadership. The background features clean architectural lines, subtle glass surfaces, and a blurred cityscape, reflecting the high-stakes world of banking and manufacturing. The lighting is bright and crisp, emphasizing professional reliability and forward-thinking intelligence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXoIfW_dGQ5HMJQWrsfgkVwnrnJptPBIZEe3CJT4fi_xy520yD5ur6MSkibcXJj6eAGNTyiv76IZ6hEy8ZUUlxj6kn4-l9blKQqNWGRb6N4po6ea_Iy640FCmunhum9Y0pucGyiajdN3Mk8q7-lQjJthKLEZDgrKgXCpGuRAYhSQejmRGiXDVY2ayGcGECyTLDUpPMQYZ8iRtgRq_OKq-BwmoIrV7ynbEmZX8IXUVOWnY-WxVK1nhXGEWQ9gn5XL0yxPA199zUkdw"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-lg shadow-2xl border border-slate-100 hidden md:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div>
+<div class="text-sm text-slate-500 font-medium">رئيس مجلس الإدارة</div>
+<div class="text-lg font-bold text-primary">المصرف الصناعي</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Professional Profile (Bento Style) -->
+<section class="py-section-padding bg-slate-50" id="profile">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4">الملف المهني والاستراتيجي</h2>
+<div class="h-1 w-24 bg-teal-600 mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-white p-10 rounded-lg shadow-sm border border-slate-100 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-teal-600 mb-6" data-weight="fill">precision_manufacturing</span>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">خبير في الثورة الصناعية الرابعة</h3>
+<p class="text-body-md font-body-md text-slate-600 leading-relaxed mb-6">
+                                بصفته حاصلاً على شهادة Industry 4.0 من معهد MIT، يقود عبد الله التحول الرقمي في القطاعات الإنتاجية، مع التركيز على دمج تقنيات إنترنت الأشياء والذكاء الاصطناعي في خطوط الإنتاج التقليدية لتعزيز الكفاءة التنافسية.
+                            </p>
+</div>
+<div class="flex gap-8">
+<div><div class="text-2xl font-bold text-primary">20+</div><div class="text-xs text-slate-500">عاماً من الخبرة</div></div>
+<div><div class="text-2xl font-bold text-primary">15+</div><div class="text-xs text-slate-500">مشروعاً استراتيجياً</div></div>
+</div>
+</div>
+<div class="bg-primary text-white p-10 rounded-lg shadow-xl relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-6">strategy</span>
+<h3 class="text-headline-md font-headline-md mb-4">القيادة المصرفية</h3>
+<p class="text-body-md font-body-md text-teal-100 opacity-90 leading-relaxed">
+                                قيادة المصرف الصناعي السوري لتطوير السياسات الائتمانية التي تدعم المشاريع الصغيرة والمتوسطة، وتعزيز البنية التحتية المالية للصناعة الوطنية.
+                            </p>
+</div>
+<div class="absolute -bottom-10 -right-10 opacity-10">
+<span class="material-symbols-outlined text-[160px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="bg-white p-10 rounded-lg shadow-sm border border-slate-100">
+<span class="material-symbols-outlined text-4xl text-teal-600 mb-6">hub</span>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">استشارات سيادية</h3>
+<p class="text-body-md font-body-md text-slate-600 leading-relaxed">
+                            مستشار لوزير الاتصالات، مساهماً في صياغة الاستراتيجيات الوطنية للتحول الرقمي والأمن السيبراني وبناء الاقتصاد المعرفي.
+                        </p>
+</div>
+<div class="md:col-span-2 bg-teal-50 p-10 rounded-lg border border-teal-100 relative">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1">
+<h3 class="text-headline-md font-headline-md text-primary mb-4">الابتكار التكنولوجي</h3>
+<p class="text-body-md font-body-md text-slate-600 leading-relaxed">
+                                    المساهمة في تأسيس البنية التحتية للروبوتات الصناعية، ونقل التكنولوجيا المتقدمة إلى الأسواق المحلية لتعزيز استقلالية القطاع الصناعي.
+                                </p>
+</div>
+<div class="w-full md:w-64 h-40 bg-teal-200/50 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, futuristic industrial laboratory featuring high-precision robotic arms and glowing blue digital interfaces. The atmosphere is professional and sterile, illuminated by cool white LED lighting. The style is industrial-minimalism, emphasizing technological sophistication and advanced manufacturing processes consistent with a top-tier industrial investment firm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk0HXtZsE7DlhYcdYfqNbxTENGeKhKCJoHH0X7chjyECsxMAfc6FXxMnAdDTbBY5j5mLHPxz2zZU2JFrLKx-Nd99CaY2dTlT3g_flBa5DQfmAjgVo1AlemgHhmy2h0rQSq4KA07aGsCTGVfJXjoirTSGJrGApMU6uIaIzllOte_nqfnyKL6p0c0vbWWBfoh4EdNFVWazbSDrxbkHgiIe8tB0gSZTE-r_SjQctI2aLh3id-XYq_MzDj4EtyeZAvXwUKIIUQpHcrbV4"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Ventures -->
+<section class="py-section-padding bg-white" id="ventures">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex items-end justify-between mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4">المشاريع الرائدة</h2>
+<p class="text-body-lg text-slate-600">تأسيس وقيادة مؤسسات غيرت مشهد التكنولوجيا والهندسة في المنطقة.</p>
+</div>
+<div class="hidden md:block">
+<button class="flex items-center gap-2 text-teal-600 font-bold hover:gap-4 transition-all">
+<span>عرض جميع المشاريع</span>
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="group cursor-pointer">
+<div class="relative h-80 rounded-xl overflow-hidden mb-8 shadow-lg group-hover:shadow-2xl transition-shadow">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-tech industrial assembly line showing robotic arms from Tulip Technologies working with surgical precision. The scene is lit with professional industrial lighting, focusing on the metallic textures and glowing status indicators. The color palette is dominated by deep teals and sharp whites, reflecting the cutting-edge nature of the first industrial robotics firm in the Middle East." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa4GJc4z6E9JGJAWRMD-gvur43TMhb41wX-H9peE_jcfU2uY36-E7_OywsU5-6aK39Ocz90BcFj5R3aNWq8U_AMLGlww7kEcclcuKzNqg2LEMXNskayasIdYiUh3OwFhoKwnrA7sgfjHdbzzBSMAuyp_V-jnR5iiT9uRZo-rZlTMNKxxRHvXgXrNR7Ryzu5d5z0IIywiX0FauhLmkvbrqDXmIi1c5AKpcCJJg_JthusZSpeKvqv8YHYriqUQbtvsTLd7PvWjq9tv8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 right-8 text-white">
+<h4 class="text-2xl font-bold mb-2">Tulip Technologies</h4>
+<p class="text-teal-200">الروبوتات الصناعية الأولى في الشرق الأوسط</p>
+</div>
+</div>
+<p class="text-body-md text-slate-600 leading-relaxed">
+                            مشروع رائد يهدف إلى دمج الأتمتة والروبوتات في خطوط الإنتاج، مما أدى إلى رفع الإنتاجية بنسبة 40% في المصانع الشريكة وتقليل الهدر الصناعي.
+                        </p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative h-80 rounded-xl overflow-hidden mb-8 shadow-lg group-hover:shadow-2xl transition-shadow">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide-angle architectural shot of a massive, elegant tensile structure at sunset. The fabric is illuminated from within, creating a glowing sculptural effect against a darkening sky. This represents Al-Mirkaz's engineering excellence in large-scale tensile structures. The mood is majestic and ambitious, showcasing high-level structural engineering and modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh-FNeOA_6ZaLd7gfT66AMV_yVbiX2nYTz41VcRWnOASQefqedbSeG3OITMsLfejFc--uF9SZqAomjqTsZuIYRsH2XTF22A0mRXztRYHaqku2THCVRf3lvK9GIrjOOMw3GusXbrObBpQjDtfVJL6LBIGkNhdXMjX1-YPrv2hKY3h2N11LOZuPVBom2y5S1qRCiPkJUc6HtOX10FNyCjXKIcyu69JNYtUCZYA6djxIfyTSAFijKcBQcDYTZbEhKeRoHIm3W_CegTNs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 right-8 text-white">
+<h4 class="text-2xl font-bold mb-2">Al-Mirkaz</h4>
+<p class="text-teal-200">الهياكل الإنشائية المتطورة</p>
+</div>
+</div>
+<p class="text-body-md text-slate-600 leading-relaxed">
+                            متخصصون في تصميم وتنفيذ المنشآت المعدنية والشد الإنشائي واسع النطاق، مع سجل حافل في تنفيذ أيقونات معمارية وصناعية كبرى في المنطقة.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Major Projects -->
+<section class="py-section-padding bg-slate-900 text-white overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="absolute top-0 left-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[120px]"></div>
+<div class="relative z-10">
+<h2 class="text-headline-lg font-headline-lg mb-12 text-center">بصمات في مشاريع كبرى</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm">
+<div class="text-teal-400 font-bold mb-4">01</div>
+<h4 class="text-xl font-bold mb-4">أرامكو السعودية</h4>
+<p class="text-slate-400 text-sm leading-relaxed">تنفيذ حلول هندسية متخصصة تدعم البنية التحتية لقطاع الطاقة العالمي، مع الالتزام بأعلى معايير السلامة والجودة الصناعية.</p>
+</div>
+<div class="p-8 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm">
+<div class="text-teal-400 font-bold mb-4">02</div>
+<h4 class="text-xl font-bold mb-4">مركز الملك عبد الله (KAPSARC)</h4>
+<p class="text-slate-400 text-sm leading-relaxed">المساهمة في تنفيذ العناصر الإنشائية والهندسية لواحد من أكثر مراكز الأبحاث استدامة وتقدماً معمارياً في العالم.</p>
+</div>
+<div class="p-8 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm">
+<div class="text-teal-400 font-bold mb-4">03</div>
+<h4 class="text-xl font-bold mb-4">رعد الشمال</h4>
+<p class="text-slate-400 text-sm leading-relaxed">توفير الدعم اللوجستي والإنشائي للمشاريع الاستراتيجية الكبرى، مما يعكس القدرة على إدارة العمليات المعقدة تحت ظروف استثنائية.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Strategic Roles -->
+<section class="py-section-padding bg-surface" id="roles">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-primary">المناصب القيادية والاستشارية</h2>
+</div>
+<div class="space-y-6 max-w-4xl mx-auto">
+<div class="flex items-center gap-8 p-8 bg-white rounded-lg shadow-sm border-r-4 border-teal-600 transition-all hover:shadow-md">
+<div class="hidden sm:flex w-20 h-20 bg-teal-50 rounded-full items-center justify-center text-teal-600 shrink-0">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-bold text-teal-600 mb-1">المصرف الصناعي</div>
+<h4 class="text-xl font-bold text-primary mb-2">رئيس مجلس الإدارة</h4>
+<p class="text-body-md text-slate-600">قيادة السياسات التمويلية للنهوض بالقطاع الصناعي الوطني وتسهيل وصول الاستثمارات للمصانع والمنشآت الإنتاجية.</p>
+</div>
+</div>
+<div class="flex items-center gap-8 p-8 bg-white rounded-lg shadow-sm border-r-4 border-blue-600 transition-all hover:shadow-md">
+<div class="hidden sm:flex w-20 h-20 bg-blue-50 rounded-full items-center justify-center text-blue-600 shrink-0">
+<span class="material-symbols-outlined text-3xl">policy</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-bold text-blue-600 mb-1">وزارة الاتصالات والتقانة</div>
+<h4 class="text-xl font-bold text-primary mb-2">مستشار السيد الوزير</h4>
+<p class="text-body-md text-slate-600">تقديم الرؤى الاستراتيجية حول التحول الرقمي، الحوكمة الإلكترونية، وتطوير البنية التحتية للاتصالات.</p>
+</div>
+</div>
+<div class="flex items-center gap-8 p-8 bg-white rounded-lg shadow-sm border-r-4 border-slate-600 transition-all hover:shadow-md">
+<div class="hidden sm:flex w-20 h-20 bg-slate-50 rounded-full items-center justify-center text-slate-600 shrink-0">
+<span class="material-symbols-outlined text-3xl">engineering</span>
+</div>
+<div class="flex-1">
+<div class="text-sm font-bold text-slate-600 mb-1">توليب تكنولوجيز</div>
+<h4 class="text-xl font-bold text-primary mb-2">الرئيس التنفيذي والمؤسس</h4>
+<p class="text-body-md text-slate-600">توجيه الرؤية التكنولوجية للشركة وتطوير الشراكات الدولية لجلب تقنيات الروبوتات المتقدمة للمنطقة.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 py-12">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-4">
+<div class="text-lg font-bold text-slate-900">عبد الله عبد الملك العلبي</div>
+<p class="text-xs font-light text-slate-500 leading-relaxed">
+                    مستثمر وخبير صناعي يكرس خبراته لبناء مستقبل تكنولوجي مستدام في العالم العربي من خلال الابتكار والقيادة الاستراتيجية.
+                </p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="text-xs font-bold text-slate-900 mb-2">روابط سريعة</div>
+<a class="text-xs font-light text-slate-500 hover:text-teal-600 transition-opacity" href="#">الرئيسية</a>
+<a class="text-xs font-light text-slate-500 hover:text-teal-600 transition-opacity" href="#">الملف الشخصي</a>
+<a class="text-xs font-light text-slate-500 hover:text-teal-600 transition-opacity" href="#">تواصل معنا</a>
+</div>
+<div class="flex flex-col gap-2">
+<div class="text-xs font-bold text-slate-900 mb-2">اتصل بنا</div>
+<span class="text-xs font-light text-slate-500">LinkedIn</span>
+<span class="text-xs font-light text-slate-500">Email</span>
+<span class="text-xs font-light text-slate-500">Saudi Arabia</span>
+<span class="text-xs font-light text-slate-500">Turkey</span>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-slate-200">
+<div class="text-xs font-light text-slate-500 text-center">
+                © 2024 Abdullah Al-Olabi. All rights reserved. جميع الحقوق محفوظة.
+            </div>
+</div>
+</footer>
+</body></html>
