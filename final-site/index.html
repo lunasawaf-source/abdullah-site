@@ -269,6 +269,78 @@ html[lang="en"] .en-inline{display:inline;}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ── MOBILE RESPONSIVE ────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Nav */
+  nav{padding:12px 16px;grid-template-columns:auto 1fr auto;gap:8px;}
+  .nav-logo{font-size:18px;}
+  .nav-links{gap:10px;}
+  .nav-links a{font-size:12px;}
+  .nav-cta{padding:7px 12px!important;font-size:12px!important;}
+  .lang-btn{padding:4px 10px;font-size:12px;}
+
+  /* Hero */
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:70px;}
+  .hero-left{padding:40px 20px 20px;}
+  .hero-right{display:none;}
+  .hero-name{font-size:clamp(32px,8vw,48px);white-space:normal;}
+  .hero-desc{font-size:14px;}
+  .hero-btns{flex-direction:column;}
+  .btn-primary,.btn-outline{width:100%;text-align:center;padding:12px 20px;}
+
+  /* Stats */
+  .stats-bar{grid-template-columns:repeat(2,1fr);padding:24px 16px;gap:20px;}
+  .stat-num{font-size:32px;}
+
+  /* Sections */
+  .section{padding:50px 20px;}
+  .section-title{font-size:24px;}
+
+  /* Expertise */
+  .expertise-grid{grid-template-columns:1fr;}
+
+  /* Timeline */
+  div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;gap:0!important;}
+  .timeline{padding-right:20px;}
+  html[lang="en"] .timeline{padding-left:20px;}
+
+  /* Education */
+  .edu-grid{grid-template-columns:1fr;}
+
+  /* Contact */
+  .contact-grid{grid-template-columns:1fr;gap:30px;}
+
+  /* Blog */
+  .blog-layout{grid-template-columns:1fr;}
+  aside{display:none;}
+  .blog-title{font-size:20px;}
+
+  /* News Slider */
+  .slider-header{padding:0 20px;}
+  .slider-track-wrapper{padding:0 20px 12px;}
+  .slider-card{min-width:280px;}
+  .slider-view-all{padding:0 20px;}
+
+  /* News Grid */
+  .news-grid{padding:30px 20px;grid-template-columns:1fr;}
+  .news-featured{grid-column:1;display:block;}
+  .news-featured .news-card-img{height:160px;}
+
+  /* Blog page */
+  div[style*="padding:70px 60px"]{padding:30px 20px!important;grid-template-columns:1fr!important;}
+
+  /* Page hero */
+  .page-hero{padding:90px 20px 40px;}
+  .page-hero-title{font-size:clamp(36px,8vw,56px);}
+
+  /* Modal */
+  .news-modal-overlay{padding:16px;}
+  .news-modal-body{padding:20px;}
+
+  /* Footer */
+  footer{flex-direction:column;gap:10px;text-align:center;padding:28px 20px;}
+}
 </style>
 </head>
 <body>
@@ -738,4 +810,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 </body>
-</html>
+</html> 
